@@ -1,0 +1,49 @@
+{
+  "name": "react-2020-03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "build-prod": "npx webpack --mode production",
+    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix src/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && npm run lint",
+      "pre-push": "npm test && npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/it-irina-f/react-2020-03.git"
+  },
+  "author": "i.fedorova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/it-irina-f/react-2020-03/issues"
+  },
+  "homepage": "https://github.com/it-irina-f/react-2020-03#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "babel-jest": "^25.2.6",
+    "babel-loader": "^8.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "html-webpack-plugin": "^4.0.4",
+    "husky": "^4.2.3",
+    "jest": "^25.2.6",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
