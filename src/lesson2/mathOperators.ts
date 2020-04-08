@@ -38,14 +38,19 @@ export const factorial: UnoOperationType = (first: number): number =>
   factorialRec(first);
 
 export const mathOperators: {
-  [key: string]: ScalarOperationType | UnoOperationType;
+  [key: string]: ScalarOperationType;
 } = {
   "*": mul,
   "/": div,
   "+": add,
   "-": minus,
-  "**": squaring,
   "^": exponentiation,
+};
+
+export const mathUnoOperators: {
+  [key: string]: UnoOperationType;
+} = {
+  "**": squaring,
   "!": factorial,
 };
 
