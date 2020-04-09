@@ -54,16 +54,16 @@ export const mathUnoOperators: {
   "!": factorial,
 };
 
-export const mathPriorities: number[] = [1, 2];
+export const mathPriorities: number[] = [0, 1, 2];
 
-const [FIRST, SECOND] = mathPriorities;
+const [UNARY, FIRST, SECOND] = mathPriorities;
 
 export const mathOperatorsPriorities: { [key: string]: number } = {
   "*": FIRST,
   "/": FIRST,
-  "**": FIRST,
   "^": FIRST,
-  "!": FIRST,
+  "**": UNARY,
+  "!": UNARY,
   "+": SECOND,
   "-": SECOND,
 };
