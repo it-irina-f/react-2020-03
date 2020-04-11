@@ -1,5 +1,6 @@
-// @ts-ignore
 import React from "react";
 import { render } from "react-dom";
 
-render(<h1>React here!</h1>, document.getElementById("root"));
+import { ClickCounter } from "./ClickCounter";
+
+render(<ClickCounter start={1} />, document.getElementById("root"));
