@@ -1,4 +1,8 @@
-import { unaryPrioritiesCalc, firstPrioritiesCalc, secondPrioritiesCalc } from "./engine";
+import {
+  unaryPrioritiesCalc,
+  firstPrioritiesCalc,
+  secondPrioritiesCalc,
+} from "./engine";
 
 describe("firstPrioritiesCalc simple cases", () => {
   it("[1, * 32]", () => {

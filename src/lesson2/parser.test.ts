@@ -71,9 +71,6 @@ describe("Parser invalid cases", () => {
   });
 
   it("5 ! ! 20", () => {
-    expect(() => parser("5 ! ! 20")).toThrow(
-        TypeError("Unexpected string")
-    );
+    expect(() => parser("5 ! ! 20")).toThrow(TypeError("Unexpected string"));
   });
-
 });
