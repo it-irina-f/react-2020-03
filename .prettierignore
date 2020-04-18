@@ -1,6 +1,5 @@
 .history
+idea/
 node_modules
-.idea/
-dist
 storybook-static
-*.config.js
+dist
