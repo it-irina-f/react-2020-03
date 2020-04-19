@@ -1,12 +1,21 @@
 import React from "react";
-import type { ListItemProps } from "types/todo";
+import type { ListItemProps, ToggleCompleteProps } from "types/todo";
 
-export const ListItem: React.FC<ListItemProps> = ({ text, isComplete }) => {
+interface Props {
+  listItem: ListItemProps;
+  toggleComplete: ToggleCompleteProps;
+}
+
+export const ListItem: React.FC<Props> = ({ listItem, toggleComplete }) => {
   return (
     <div>
       <label>
-        <input type="checkbox" checked={isComplete} />
-        {text}
+        <input
+          type="checkbox"
+          checked={listItem.isComplete}
+          onChange={() => toggleComplete(listItem.id)}
+        />
+        {listItem.text}
       </label>
     </div>
   );

@@ -8,12 +8,5 @@ export default {
   decorators: [withKnobs],
 };
 
-const list = [
-  { text: "Полить цветы", isComplete: true },
-  { text: "Сделать ДЗ", isComplete: false },
-  { text: "Купить продукты", isComplete: true },
-  { text: "Приготовить ужин", isComplete: false },
-  { text: "Уборка квартиры", isComplete: false },
-];
 
 export const componentToDoList = () => <ToDoList />;

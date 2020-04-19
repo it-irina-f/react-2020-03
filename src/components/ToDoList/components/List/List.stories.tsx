@@ -10,11 +10,13 @@ export default {
 };
 
 const list = [
-  { text: "Полить цветы", isComplete: true },
-  { text: "Сделать ДЗ", isComplete: false },
-  { text: "Купить продукты", isComplete: true },
-  { text: "Приготовить ужин", isComplete: false },
-  { text: "Уборка квартиры", isComplete: false },
+  { id: 0, text: "Полить цветы", isComplete: true },
+  { id: 1, text: "Сделать ДЗ", isComplete: false },
+  { id: 2, text: "Купить продукты", isComplete: true },
+  { id: 3, text: "Приготовить ужин", isComplete: false },
+  { id: 4, text: "Уборка квартиры", isComplete: false },
 ];
 
-export const componentList = () => [<List key="jsx" list={list} />];
+export const componentList = () => [
+  <List key="jsx" list={list} toggleComplete={action("Item clicked ")} />,
+];

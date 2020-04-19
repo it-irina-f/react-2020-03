@@ -1,28 +1,28 @@
 import React from "react";
-import type { ListItemProps } from "types/todo";
+import type { ListItemProps, ToggleCompleteProps } from "types/todo";
 import { List } from "./components/List";
 import styled from "@emotion/styled";
 
-/*interface ToDoListProps {
-  list: Array<ListItemProps>;
-}*/
 export const initialList: Array<ListItemProps> = [
-  { text: "Полить цветы", isComplete: true },
-  { text: "Сделать ДЗ", isComplete: false },
-  { text: "Купить продукты", isComplete: true },
-  { text: "Приготовить ужин", isComplete: false },
-  { text: "Уборка квартиры", isComplete: true },
-  { text: "Погулять с собакой", isComplete: false },
+  { id: 0, text: "Полить цветы", isComplete: true },
+  { id: 1, text: "Сделать ДЗ", isComplete: false },
+  { id: 2, text: "Купить продукты", isComplete: true },
+  { id: 3, text: "Приготовить ужин", isComplete: false },
+  { id: 4, text: "Уборка квартиры", isComplete: true },
+  { id: 5, text: "Погулять с собакой", isComplete: false },
 ];
 
 interface ToDoListState {
   list: Array<ListItemProps>;
+  //toggleComplete: ToggleCompleteProps;
 }
 
 const ToDoListWrapper = styled.div`
   display: block;
   width: 500px;
   margin: 10px auto;
+  padding: 20px 50px;
+  background: #e1f1fb;
 `;
 
 const TitleWrapper = styled.div`
@@ -39,13 +39,27 @@ export class ToDoList extends React.Component<{}, ToDoListState> {
     this.state = {
       list: initialList,
     };
+    this.toggleComplete = this.toggleComplete.bind(this);
+  }
+
+  public toggleComplete(id: number): void {
+    const updateList = this.state.list.map((row) => {
+      if (row.id === id) {
+        return { ...row, isComplete: !row.isComplete };
+      }
+      return row;
+    });
+
+    this.setState({
+      list: updateList,
+    });
   }
 
   render() {
     return (
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
-        <List list={this.state.list} />
+        <List list={this.state.list} toggleComplete={this.toggleComplete} />
       </ToDoListWrapper>
     );
   }
