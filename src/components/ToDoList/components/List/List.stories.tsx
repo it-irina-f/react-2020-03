@@ -17,9 +17,4 @@ const list = [
   { text: "Уборка квартиры", isComplete: false },
 ];
 
-export const componentList = () => [
-  <List
-    key="jsx"
-    list={list}
-  />,
-];
+export const componentList = () => [<List key="jsx" list={list} />];
