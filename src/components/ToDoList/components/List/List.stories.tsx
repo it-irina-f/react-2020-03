@@ -1,6 +1,6 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, object, array } from "@storybook/addon-knobs";
+import { withKnobs, object } from "@storybook/addon-knobs";
 
 import { List } from "./List";
 
@@ -18,5 +18,9 @@ const list = [
 ];
 
 export const componentList = () => [
-  <List key="jsx" list={list} toggleComplete={action("Item clicked ")} />,
+  <List
+    key="jsx"
+    list={object("list", list)}
+    toggleComplete={action("Item clicked ")}
+  />,
 ];

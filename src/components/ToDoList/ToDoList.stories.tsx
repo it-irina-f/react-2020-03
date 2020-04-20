@@ -8,5 +8,4 @@ export default {
   decorators: [withKnobs],
 };
 
-
 export const componentToDoList = () => <ToDoList />;

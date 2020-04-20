@@ -1,6 +1,7 @@
 import React from "react";
-import type { ListItemProps, ToggleCompleteProps } from "types/todo";
+import type { ListItemProps } from "types/todo";
 import { List } from "./components/List";
+import { AddForm } from "./components/AddForm";
 import styled from "@emotion/styled";
 
 export const initialList: Array<ListItemProps> = [
@@ -14,7 +15,6 @@ export const initialList: Array<ListItemProps> = [
 
 interface ToDoListState {
   list: Array<ListItemProps>;
-  //toggleComplete: ToggleCompleteProps;
 }
 
 const ToDoListWrapper = styled.div`
@@ -60,6 +60,7 @@ export class ToDoList extends React.Component<{}, ToDoListState> {
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
         <List list={this.state.list} toggleComplete={this.toggleComplete} />
+        <AddForm />
       </ToDoListWrapper>
     );
   }

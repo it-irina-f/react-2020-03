@@ -1,6 +1,6 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+import { withKnobs, object } from "@storybook/addon-knobs";
 import { ListItem } from "./ListItem";
 
 export default {
@@ -13,7 +13,7 @@ const listItem2 = { id: 1, text: "Сделать ДЗ", isComplete: false };
 
 export const noComplete = () => [
   <ListItem
-    listItem={listItem1}
+    listItem={object("listItem", { ...listItem1 })}
     toggleComplete={action("Item clicked")}
     key="jsx"
   ></ListItem>,
@@ -21,7 +21,7 @@ export const noComplete = () => [
 
 export const complete = () => [
   <ListItem
-    listItem={listItem2}
+    listItem={object("listItem", { ...listItem2 })}
     toggleComplete={action("Item clicked")}
     key="jsx"
   ></ListItem>,
