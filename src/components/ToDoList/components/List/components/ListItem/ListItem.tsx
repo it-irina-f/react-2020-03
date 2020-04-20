@@ -12,6 +12,7 @@ export const ListItem: React.FC<Props> = ({ listItem, toggleComplete }) => {
       <label>
         <input
           type="checkbox"
+          name={"checkbox_" + listItem.id}
           checked={listItem.isComplete}
           onChange={() => toggleComplete(listItem.id)}
         />

@@ -22,7 +22,7 @@ const ToDoListWrapper = styled.div`
   width: 500px;
   margin: 10px auto;
   padding: 20px 50px;
-  background: #e1f1fb;
+  background: #eaeaea;
 `;
 
 const TitleWrapper = styled.div`
