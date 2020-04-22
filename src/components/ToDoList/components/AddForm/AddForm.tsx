@@ -1,17 +1,33 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
-//import type { ListItemProps, ToggleCompleteProps } from "types/todo";
+import React, { useRef } from "react";
+import type { AddFormProps } from "types/todo";
 
+interface Props {
+  addListItem: AddFormProps;
+}
 
-interface AddFormProps {}
+export const AddForm: React.FC<Props> = ({ addListItem }) => {
+  const itemText = useRef(null);
 
-export const AddForm: React.FC<AddFormProps> = ({}) => {
+  const submitHandler = (): void => {
+    const listItem = itemText.current.value || "";
+    if (listItem.length) {
+      addListItem(listItem);
+      itemText.current.value = "";
+    }
+  };
+
   return (
     <form>
-      <input type="text" name="addlist" placeholder="добавить новую задачу" />
+      <input
+        type="text"
+        name="addlistItem"
+        placeholder="Добавить новую задачу"
+        ref={itemText}
+      />
 
-      <button type="submit">Добавить</button>
+      <button type="button" onClick={submitHandler}>
+        Добавить
+      </button>
     </form>
   );
 };

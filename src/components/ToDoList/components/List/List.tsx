@@ -6,6 +6,7 @@ import { ListItem } from "./components";
 
 const ListWrapper = styled.div`
   padding: 20px;
+  margin-bottom: 20px;
   border: 1px solid #6883bf;
   border-radius: 5px;
 `;

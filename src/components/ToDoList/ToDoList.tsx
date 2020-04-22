@@ -1,5 +1,5 @@
 import React from "react";
-import type { ListItemProps, ToggleCompleteProps } from "types/todo";
+import type { ListItemProps } from "types/todo";
 import { List } from "./components/List";
 import { AddForm } from "./components/AddForm";
 import styled from "@emotion/styled";
@@ -35,6 +35,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       list: props.list,
     };
     this.toggleCompleteHandler = this.toggleCompleteHandler.bind(this);
+    this.addListItemHandler = this.addListItemHandler.bind(this);
   }
 
   public toggleCompleteHandler(id: number): void {
@@ -50,6 +51,15 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     });
   }
 
+  public addListItemHandler(text: string): void {
+    this.setState({
+      list: [
+        ...this.state.list,
+        { id: this.state.list.length, text: text, isComplete: false },
+      ],
+    });
+  }
+
   render() {
     return (
       <ToDoListWrapper>
@@ -58,7 +68,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
           list={this.state.list}
           toggleComplete={this.toggleCompleteHandler}
         />
-        <AddForm />
+        <AddForm addListItem={this.addListItemHandler} />
       </ToDoListWrapper>
     );
   }

@@ -8,6 +8,6 @@ export interface ListProps {
   list: ListItemProps[];
 }
 
-export interface ToggleCompleteProps {
-  toggleComplete: (id: number) => void;
-}
+export type ToggleCompleteProps = (id: number) => void;
+
+export type AddFormProps = (text: string) => void;
