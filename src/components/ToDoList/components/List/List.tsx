@@ -11,7 +11,7 @@ const ListWrapper = styled.div`
 `;
 
 interface Props {
-  list: Array<ListItemProps>;
+  list: ListItemProps[];
   toggleComplete: ToggleCompleteProps;
 }
 

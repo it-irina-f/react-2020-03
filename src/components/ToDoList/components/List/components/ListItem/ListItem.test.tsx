@@ -28,14 +28,14 @@ describe("Component ListItem", () => {
 
   it("simulate onChange checkbox by list item where isComplete=true", () => {
     const wrapper = mount(
-        <ListItem listItem={listItem1} toggleComplete={click} />
+      <ListItem listItem={listItem1} toggleComplete={click} />
     );
     wrapper.find("input").simulate("change");
     expect(click).toHaveBeenCalled();
   });
   it("simulate onChange checkbox by list item where isComplete=false", () => {
     const wrapper = mount(
-        <ListItem listItem={listItem2} toggleComplete={click} />
+      <ListItem listItem={listItem2} toggleComplete={click} />
     );
     wrapper.find("input").simulate("change");
     expect(click).toHaveBeenCalled();

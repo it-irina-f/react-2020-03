@@ -5,10 +5,9 @@ export interface ListItemProps {
 }
 
 export interface ListProps {
-  list: Array<ListItemProps>;
+  list: ListItemProps[];
 }
 
 export interface ToggleCompleteProps {
-  // toggleComplete: (checkedListItem: ListItemProps) => void;
   toggleComplete: (id: number) => void;
 }

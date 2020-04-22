@@ -4,13 +4,12 @@ import { css } from "@emotion/core";
 //import type { ListItemProps, ToggleCompleteProps } from "types/todo";
 
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface Props {}
+interface AddFormProps {}
 
-export const AddForm: React.FC<Props> = ({}) => {
+export const AddForm: React.FC<AddFormProps> = ({}) => {
   return (
     <form>
-      <input type="text" name={"addlist"} />
+      <input type="text" name="addlist" placeholder="добавить новую задачу" />
 
       <button type="submit">Добавить</button>
     </form>

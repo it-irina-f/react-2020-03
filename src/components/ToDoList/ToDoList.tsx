@@ -1,20 +1,15 @@
 import React from "react";
-import type { ListItemProps } from "types/todo";
+import type { ListItemProps, ToggleCompleteProps } from "types/todo";
 import { List } from "./components/List";
 import { AddForm } from "./components/AddForm";
 import styled from "@emotion/styled";
 
-export const initialList: Array<ListItemProps> = [
-  { id: 0, text: "Полить цветы", isComplete: true },
-  { id: 1, text: "Сделать ДЗ", isComplete: false },
-  { id: 2, text: "Купить продукты", isComplete: true },
-  { id: 3, text: "Приготовить ужин", isComplete: false },
-  { id: 4, text: "Уборка квартиры", isComplete: true },
-  { id: 5, text: "Погулять с собакой", isComplete: false },
-];
+interface ToDoListProps {
+  list: ListItemProps[];
+}
 
 interface ToDoListState {
-  list: Array<ListItemProps>;
+  list: ListItemProps[];
 }
 
 const ToDoListWrapper = styled.div`
@@ -33,16 +28,16 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 
-export class ToDoList extends React.Component<{}, ToDoListState> {
-  constructor() {
-    super({});
+export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
+  constructor(props: ToDoListProps) {
+    super(props);
     this.state = {
-      list: initialList,
+      list: props.list,
     };
-    this.toggleComplete = this.toggleComplete.bind(this);
+    this.toggleCompleteHandler = this.toggleCompleteHandler.bind(this);
   }
 
-  public toggleComplete(id: number): void {
+  public toggleCompleteHandler(id: number): void {
     const updateList = this.state.list.map((row) => {
       if (row.id === id) {
         return { ...row, isComplete: !row.isComplete };
@@ -59,7 +54,10 @@ export class ToDoList extends React.Component<{}, ToDoListState> {
     return (
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
-        <List list={this.state.list} toggleComplete={this.toggleComplete} />
+        <List
+          list={this.state.list}
+          toggleComplete={this.toggleCompleteHandler}
+        />
         <AddForm />
       </ToDoListWrapper>
     );
