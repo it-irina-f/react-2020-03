@@ -1,5 +1,5 @@
 import React from "react";
-import {withKnobs, object} from "@storybook/addon-knobs";
+import { withKnobs, object } from "@storybook/addon-knobs";
 
 import { ToDoList } from "./ToDoList";
 
