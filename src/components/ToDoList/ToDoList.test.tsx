@@ -1,10 +1,8 @@
 import React from "react";
-import { mount } from "enzyme";
+import { mount, shallow } from "enzyme";
 import renderer from "react-test-renderer";
 
 import { ToDoList } from "./ToDoList";
-
-const click = jest.fn();
 
 const list = [
   { id: 0, text: "Полить цветы", isComplete: true },
@@ -19,5 +17,42 @@ describe("Component ToDoList", () => {
     expect(
       renderer.create(<ToDoList list={list} />).toJSON()
     ).toMatchSnapshot();
+  });
+});
+
+jest.useFakeTimers();
+
+describe("Render ToDoList: check func setTimeout", () => {
+  const getComponent = () => shallow(<ToDoList />);
+
+  it("should call setTimeout on mounting", () => {
+    const component = getComponent();
+    expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 3000);
+  });
+
+  const wrapper = mount(<ToDoList />);
+
+  it("renders preloader", () => {
+    setTimeout(() => {
+      expect(wrapper.find("h1").text()).toEqual("Загрузка данных...");
+    }, 1000);
+  });
+
+  it("render only one  h1", () => {
+    setTimeout(() => {
+      expect(wrapper.find("h1")).toHaveLength(1);
+    }, 1000);
+  });
+
+  it("not render List", () => {
+    setTimeout(() => {
+      expect(wrapper.find("input")).toHaveLength(0);
+    }, 1000);
+  });
+
+  it("render List", () => {
+    setTimeout(() => {
+      expect(wrapper.find("input")).toHaveLength(1);
+    }, 3100);
   });
 });
