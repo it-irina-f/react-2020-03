@@ -16,10 +16,72 @@ interface Props {
   toggleComplete: ToggleCompleteProps;
 }
 
-export const List: FC<Props> = ({ list, toggleComplete }) => (
-  <ListWrapper>
-    {list.map((row) => (
-      <ListItem key={row.id} listItem={row} toggleComplete={toggleComplete} />
-    ))}
-  </ListWrapper>
-);
+interface State {
+  list: ListItemProps[];
+}
+
+export class List extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      list: this.props.list,
+    };
+  }
+
+  componentDidMount(): void {
+    const newList = this.sortList(this.state.list);
+    this.setState({
+      list: newList,
+    });
+  }
+
+  componentDidUpdate(): void {
+    const propsList = this.props.list;
+    const stateList = this.state.list;
+
+    function isNoChange(stateRow: ListItemProps) {
+      return (
+        propsList.filter((propsRow) => {
+          return (
+            stateRow.id === propsRow.id &&
+            stateRow.isComplete === propsRow.isComplete
+          );
+        }).length > 0
+      );
+    }
+
+    if (stateList.every(isNoChange) === false) {
+      const newList = this.sortList(this.props.list);
+
+      this.setState({
+        list: newList,
+      });
+    }
+  }
+
+  sortList(initList: ListItemProps[]) {
+    const listComplete = initList.filter((row) => {
+      return row.isComplete === true;
+    });
+
+    const listNoComplete = initList.filter((row) => {
+      return row.isComplete === false;
+    });
+
+    return listNoComplete.concat(listComplete);
+  }
+
+  render() {
+    return (
+      <ListWrapper>
+        {this.state.list.map((row) => (
+          <ListItem
+            key={row.id}
+            listItem={row}
+            toggleComplete={this.props.toggleComplete}
+          />
+        ))}
+      </ListWrapper>
+    );
+  }
+}

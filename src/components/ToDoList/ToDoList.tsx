@@ -46,7 +46,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.timerHandle = window.setTimeout(() => this.getList(), 3000);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(): void {
     clearTimeout(this.timerHandle);
   }
 
@@ -69,9 +69,17 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       return row;
     });
 
-    this.setState({
-      list: updateList,
-    });
+    this.setState(
+      {
+        list: updateList,
+      },
+      () => {
+        localStorage.setItem(
+          "localStorageTodos",
+          JSON.stringify(this.state.list)
+        );
+      }
+    );
   }
 
   public addListItemHandler(text: string): void {
