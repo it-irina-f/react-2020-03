@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component List renders list 1`] = `
+<div
+  className="css-bb4zwd"
+>
+  <div>
+    <label>
+      <input
+        checked={false}
+        name="checkbox_1"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Сделать ДЗ
+    </label>
+  </div>
+  <div>
+    <label>
+      <input
+        checked={false}
+        name="checkbox_3"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Приготовить ужин
+    </label>
+  </div>
+  <div>
+    <label>
+      <input
+        checked={false}
+        name="checkbox_4"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Уборка квартиры
+    </label>
+  </div>
+  <div>
+    <label>
+      <input
+        checked={true}
+        name="checkbox_0"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Полить цветы
+    </label>
+  </div>
+  <div>
+    <label>
+      <input
+        checked={true}
+        name="checkbox_2"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Купить продукты
+    </label>
+  </div>
+</div>
+`;

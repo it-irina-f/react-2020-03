@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component ListItem renders list item where isComplete=false 1`] = `
+<div>
+  <label>
+    <input
+      checked={false}
+      name="checkbox_1"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Сделать ДЗ
+  </label>
+</div>
+`;
+
+exports[`Component ListItem renders list item where isComplete=true 1`] = `
+<div>
+  <label>
+    <input
+      checked={true}
+      name="checkbox_0"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Полить цветы
+  </label>
+</div>
+`;

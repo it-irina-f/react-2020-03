@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Component AddForm renders AddForm 1`] = `
+<form>
+  <input
+    name="addlistItem"
+    placeholder="Добавить новую задачу"
+    type="text"
+  />
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Добавить
+  </button>
+</form>
+`;

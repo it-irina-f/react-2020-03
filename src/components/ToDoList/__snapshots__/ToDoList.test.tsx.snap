@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component ToDoList renders list 1`] = `
+<div
+  className="css-vtf7xb"
+>
+  <div
+    className="css-k87agx"
+  >
+    Список дел
+  </div>
+  <h1>
+    Загрузка данных...
+  </h1>
+  <form>
+    <input
+      name="addlistItem"
+      placeholder="Добавить новую задачу"
+      type="text"
+    />
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Добавить
+    </button>
+  </form>
+</div>
+`;
