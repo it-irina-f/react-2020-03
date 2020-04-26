@@ -3,6 +3,7 @@ import type { ListItemProps } from "types/todo";
 import { List } from "./components/List";
 import { AddForm } from "./components/AddForm";
 import styled from "@emotion/styled";
+import { reactLocalStorage } from "reactjs-localstorage";
 
 interface ToDoListProps {
   list?: ListItemProps[];
@@ -30,8 +31,6 @@ const TitleWrapper = styled.div`
 `;
 
 export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
-  private timerHandle: number | undefined;
-
   constructor(props: ToDoListProps) {
     super(props);
     this.state = {
@@ -43,16 +42,18 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   }
 
   componentDidMount(): void {
-    this.timerHandle = window.setTimeout(() => this.getList(), 3000);
+    this.timerHandle();
   }
 
   componentWillUnmount(): void {
-    clearTimeout(this.timerHandle);
+    clearTimeout(this.timerHandle());
   }
 
+  timerHandle = () => setTimeout(() => this.getList(), 3000);
+
   getList(): void {
-    const todosFromLocalStorage = JSON.parse(
-      localStorage.getItem("localStorageTodos") as string
+    const todosFromLocalStorage = reactLocalStorage.getObject(
+      "localStorageTodos"
     );
 
     this.setState({
@@ -61,42 +62,35 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     });
   }
 
+  updateList(updateList): void {
+    this.setState(
+      {
+        list: updateList,
+      },
+      () => {
+        reactLocalStorage.setObject("localStorageTodos", this.state.list);
+      }
+    );
+  }
+
   public toggleCompleteHandler(id: number): void {
-    const updateList = this.state.list.map((row) => {
+    const updList = this.state.list.map((row) => {
       if (row.id === id) {
         return { ...row, isComplete: !row.isComplete };
       }
       return row;
     });
 
-    this.setState(
-      {
-        list: updateList,
-      },
-      () => {
-        localStorage.setItem(
-          "localStorageTodos",
-          JSON.stringify(this.state.list)
-        );
-      }
-    );
+    this.updateList(updList);
   }
 
   public addListItemHandler(text: string): void {
-    this.setState(
-      {
-        list: [
-          ...this.state.list,
-          { id: this.state.list.length, text: text, isComplete: false },
-        ],
-      },
-      () => {
-        localStorage.setItem(
-          "localStorageTodos",
-          JSON.stringify(this.state.list)
-        );
-      }
-    );
+    const newList = [
+      ...this.state.list,
+      { id: this.state.list.length, text: text, isComplete: false },
+    ];
+
+    this.updateList(newList);
   }
 
   render() {

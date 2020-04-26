@@ -33,24 +33,20 @@ describe("Render ToDoList: check func setTimeout", () => {
   const wrapper = mount(<ToDoList />);
 
   it("renders preloader", () => {
-    setTimeout(() => {
-      expect(wrapper.find("h1").text()).toEqual("Загрузка данных...");
-    }, 1000);
+    expect(wrapper.find("h1").text()).toEqual("Загрузка данных...");
   });
 
   it("render only one  h1", () => {
-    setTimeout(() => {
-      expect(wrapper.find("h1")).toHaveLength(1);
-    }, 1000);
+    expect(wrapper.find("h1")).toHaveLength(1);
   });
 
-  it("not render List", () => {
+  it("not render input element", () => {
     setTimeout(() => {
       expect(wrapper.find("input")).toHaveLength(0);
     }, 1000);
   });
 
-  it("render List", () => {
+  it("render input element", () => {
     setTimeout(() => {
       expect(wrapper.find("input")).toHaveLength(1);
     }, 3100);
