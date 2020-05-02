@@ -17,6 +17,9 @@ export class AddForm extends React.Component<Props, State> {
   submitHandler = (ev: React.FormEvent) => {
     ev.preventDefault();
     this.props.addListItem(this.state.textInput);
+    this.setState({
+      textInput: "",
+    });
   };
 
   inputChangeHandle = (ev: React.ChangeEvent) => {
