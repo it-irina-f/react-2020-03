@@ -39,9 +39,9 @@ export class List extends React.Component<Props, State> {
     const propsList = this.props.list;
     const stateList = this.state.list;
 
-    function isNoChange(stateRow: ListItemProps) {
+    function isNoChange(propsRow: ListItemProps) {
       return (
-        propsList.filter((propsRow) => {
+        stateList.filter((stateRow) => {
           return (
             stateRow.id === propsRow.id &&
             stateRow.isComplete === propsRow.isComplete
@@ -50,7 +50,7 @@ export class List extends React.Component<Props, State> {
       );
     }
 
-    if (stateList.every(isNoChange) === false) {
+    if (propsList.every(isNoChange) === false) {
       const newList = this.sortList(this.props.list);
 
       this.setState({

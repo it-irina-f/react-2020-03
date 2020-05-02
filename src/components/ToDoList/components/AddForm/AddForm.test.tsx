@@ -13,9 +13,12 @@ describe("Test Component AddForm", () => {
     ).toMatchSnapshot();
   });
 
-  /*  it("should be able to click the button", () => {
+  it("should be able to click the button", () => {
     const element = mount(<AddForm addListItem={click} />);
-    element.find("button").simulate("click");
+    element.find("input").simulate("change", {
+      target: { value: "оплатить жкх" },
+    });
+    element.find("button").simulate("submit");
     expect(click).toHaveBeenCalled();
-  });*/
+  });
 });

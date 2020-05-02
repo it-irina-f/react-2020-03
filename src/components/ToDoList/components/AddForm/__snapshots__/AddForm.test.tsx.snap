@@ -1,16 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test Component AddForm renders AddForm 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <input
     name="addlistItem"
+    onChange={[Function]}
     placeholder="Добавить новую задачу"
     type="text"
+    value=""
   />
-  <button
-    onClick={[Function]}
-    type="button"
-  >
+  <button>
     Добавить
   </button>
 </form>

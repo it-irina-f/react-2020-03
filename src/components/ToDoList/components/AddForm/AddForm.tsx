@@ -1,33 +1,43 @@
-import React, { useRef } from "react";
+import React from "react";
 import type { AddFormProps } from "types/todo";
 
 interface Props {
   addListItem: AddFormProps;
 }
 
-export const AddForm: React.FC<Props> = ({ addListItem }) => {
-  const itemText = useRef(null);
+interface State {
+  textInput: string;
+}
 
-  const submitHandler = (): void => {
-    const listItem = itemText.current.value || "";
-    if (listItem.length) {
-      addListItem(listItem);
-      itemText.current.value = "";
-    }
+export class AddForm extends React.Component<Props, State> {
+  state = {
+    textInput: "",
   };
 
-  return (
-    <form>
-      <input
-        type="text"
-        name="addlistItem"
-        placeholder="Добавить новую задачу"
-        ref={itemText}
-      />
+  submitHandler = (ev: React.FormEvent) => {
+    ev.preventDefault();
+    this.props.addListItem(this.state.textInput);
+  };
 
-      <button type="button" onClick={submitHandler}>
-        Добавить
-      </button>
-    </form>
-  );
-};
+  inputChangeHandle = (ev: React.ChangeEvent) => {
+    this.setState({
+      textInput: (ev.target as HTMLInputElement).value,
+    });
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.submitHandler}>
+        <input
+          type="text"
+          name="addlistItem"
+          placeholder="Добавить новую задачу"
+          value={this.state.textInput}
+          onChange={this.inputChangeHandle}
+        />
+
+        <button>Добавить</button>
+      </form>
+    );
+  }
+}

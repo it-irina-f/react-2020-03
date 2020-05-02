@@ -12,16 +12,17 @@ exports[`Component ToDoList renders list 1`] = `
   <h1>
     Загрузка данных...
   </h1>
-  <form>
+  <form
+    onSubmit={[Function]}
+  >
     <input
       name="addlistItem"
+      onChange={[Function]}
       placeholder="Добавить новую задачу"
       type="text"
+      value=""
     />
-    <button
-      onClick={[Function]}
-      type="button"
-    >
+    <button>
       Добавить
     </button>
   </form>
