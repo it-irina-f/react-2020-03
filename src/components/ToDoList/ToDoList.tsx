@@ -61,10 +61,9 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     const todosFromLocalStorage = reactLocalStorage.getObject(
       "localStorageTodos"
     );
-
     this.setState({
       isLoading: false,
-      list: todosFromLocalStorage || [],
+      list: Array.isArray(todosFromLocalStorage)? todosFromLocalStorage : [],
     });
   }
 

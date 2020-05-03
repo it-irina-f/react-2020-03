@@ -49,6 +49,23 @@ describe("Component List", () => {
         .toJSON()
     ).toMatchSnapshot();
   });
+  it("renders empty list", () => {
+    expect(
+      renderer
+        .create(
+          <List
+            list={[]}
+            toggleComplete={click}
+            deleteListItem={click}
+            editListItem={click}
+            cancelEditing={click}
+            saveListItem={click}
+            editId={-1}
+          />
+        )
+        .toJSON()
+    ).toMatchSnapshot();
+  });
 
   it("simulate onChange checkbox by list", () => {
     const wrapper = mount(
@@ -235,5 +252,21 @@ describe("Component List", () => {
     );
     wrapper.find("button[name='cancelEditing']").simulate("click");
     expect(click).toHaveBeenCalled();
+  });
+
+  it("check message for empty list", () => {
+    const wrapper = mount(
+      <List
+        list={[]}
+        toggleComplete={click}
+        deleteListItem={click}
+        editListItem={click}
+        cancelEditing={click}
+        saveListItem={click}
+        editId={-1}
+      />
+    );
+    expect(wrapper.find("div")).toHaveLength(1);
+    expect(wrapper.find("div").text()).toEqual("Список пустой");
   });
 });

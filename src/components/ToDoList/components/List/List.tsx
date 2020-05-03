@@ -89,24 +89,26 @@ export class List extends React.Component<Props, State> {
     const editId = this.props.editId;
     return (
       <ListWrapper>
-        {this.state.list.map((row) =>
-          row.id === editId ? (
-            <ListItemEdit
-              key={row.id}
-              listItem={row}
-              cancelEditing={this.props.cancelEditing}
-              saveListItem={this.props.saveListItem}
-            />
-          ) : (
-            <ListItem
-              key={row.id}
-              listItem={row}
-              toggleComplete={this.props.toggleComplete}
-              deleteListItem={this.props.deleteListItem}
-              editListItem={this.props.editListItem}
-            />
-          )
-        )}
+        {this.state.list.length === 0
+          ? "Список пустой"
+          : this.state.list.map((row) =>
+              row.id === editId ? (
+                <ListItemEdit
+                  key={row.id}
+                  listItem={row}
+                  cancelEditing={this.props.cancelEditing}
+                  saveListItem={this.props.saveListItem}
+                />
+              ) : (
+                <ListItem
+                  key={row.id}
+                  listItem={row}
+                  toggleComplete={this.props.toggleComplete}
+                  deleteListItem={this.props.deleteListItem}
+                  editListItem={this.props.editListItem}
+                />
+              )
+            )}
       </ListWrapper>
     );
   }

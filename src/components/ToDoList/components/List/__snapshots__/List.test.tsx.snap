@@ -130,6 +130,14 @@ exports[`Component List render list where 1 editing item 1`] = `
 </div>
 `;
 
+exports[`Component List renders empty list 1`] = `
+<div
+  className="css-bb4zwd"
+>
+  Список пустой
+</div>
+`;
+
 exports[`Component List renders list 1`] = `
 <div
   className="css-bb4zwd"
