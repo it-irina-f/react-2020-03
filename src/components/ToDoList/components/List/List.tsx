@@ -1,8 +1,13 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import type { ListItemProps, ToggleCompleteProps } from "types/todo";
+import type {
+  ListItemProps,
+  ToggleCompleteProps,
+  saveListItemProps,
+  cancelEditingProps,
+} from "types/todo";
 
-import { ListItem } from "./components";
+import { ListItem, ListItemEdit } from "./components";
 
 const ListWrapper = styled.div`
   padding: 20px;
@@ -15,6 +20,10 @@ interface Props {
   list: ListItemProps[];
   toggleComplete: ToggleCompleteProps;
   deleteListItem: ToggleCompleteProps;
+  editListItem: ToggleCompleteProps;
+  cancelEditing: cancelEditingProps;
+  saveListItem: saveListItemProps;
+  editId: number;
 }
 
 interface State {
@@ -45,7 +54,8 @@ export class List extends React.Component<Props, State> {
         stateList.filter((stateRow) => {
           return (
             stateRow.id === propsRow.id &&
-            stateRow.isComplete === propsRow.isComplete
+            stateRow.isComplete === propsRow.isComplete &&
+            stateRow.text === propsRow.text
           );
         }).length > 0
       );
@@ -76,16 +86,27 @@ export class List extends React.Component<Props, State> {
   }
 
   render() {
+    const editId = this.props.editId;
     return (
       <ListWrapper>
-        {this.state.list.map((row) => (
-          <ListItem
-            key={row.id}
-            listItem={row}
-            toggleComplete={this.props.toggleComplete}
-            deleteListItem={this.props.deleteListItem}
-          />
-        ))}
+        {this.state.list.map((row) =>
+          row.id === editId ? (
+            <ListItemEdit
+              key={row.id}
+              listItem={row}
+              cancelEditing={this.props.cancelEditing}
+              saveListItem={this.props.saveListItem}
+            />
+          ) : (
+            <ListItem
+              key={row.id}
+              listItem={row}
+              toggleComplete={this.props.toggleComplete}
+              deleteListItem={this.props.deleteListItem}
+              editListItem={this.props.editListItem}
+            />
+          )
+        )}
       </ListWrapper>
     );
   }

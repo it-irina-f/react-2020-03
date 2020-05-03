@@ -12,6 +12,14 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
     Сделать ДЗ
   </label>
   <button
+    name="editListItem"
+    onClick={[Function]}
+    type="button"
+  >
+    Редактировать
+  </button>
+  <button
+    name="deleteListItem"
     onClick={[Function]}
     type="button"
   >
@@ -32,6 +40,14 @@ exports[`Component ListItem renders list item where isComplete=true 1`] = `
     Полить цветы
   </label>
   <button
+    name="editListItem"
+    onClick={[Function]}
+    type="button"
+  >
+    Редактировать
+  </button>
+  <button
+    name="deleteListItem"
     onClick={[Function]}
     type="button"
   >

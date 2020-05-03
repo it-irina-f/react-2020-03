@@ -12,6 +12,7 @@ interface ToDoListProps {
 interface ToDoListState {
   list: ListItemProps[];
   isLoading: boolean;
+  editId: number;
 }
 
 const ToDoListWrapper = styled.div`
@@ -36,10 +37,14 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.state = {
       list: [],
       isLoading: true,
+      editId: -1,
     };
     this.toggleCompleteHandler = this.toggleCompleteHandler.bind(this);
     this.addListItemHandler = this.addListItemHandler.bind(this);
     this.deleteItemHandler = this.deleteItemHandler.bind(this);
+    this.editItemHandler = this.editItemHandler.bind(this);
+    this.cancelEditingHandler = this.cancelEditingHandler.bind(this);
+    this.saveItemHandler = this.saveItemHandler.bind(this);
   }
 
   componentDidMount(): void {
@@ -88,7 +93,11 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   public addListItemHandler(text: string): void {
     const newList = [
       ...this.state.list,
-      { id: this.state.list.length, text: text, isComplete: false },
+      {
+        id: Math.floor(Math.random() * 1000000),
+        text: text,
+        isComplete: false,
+      },
     ];
 
     this.updateList(newList);
@@ -97,6 +106,33 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   public deleteItemHandler(id: number): void {
     const updList = this.state.list.filter((row) => {
       return row.id !== id;
+    });
+
+    this.updateList(updList);
+  }
+
+  public editItemHandler(id: number): void {
+    this.setState({
+      editId: id,
+    });
+  }
+
+  public cancelEditingHandler(): void {
+    this.setState({
+      editId: -1,
+    });
+  }
+
+  public saveItemHandler(id: number, text: string): void {
+    this.setState({
+      editId: -1,
+    });
+
+    const updList = this.state.list.map((row) => {
+      if (row.id === id) {
+        return { ...row, text: text };
+      }
+      return row;
     });
 
     this.updateList(updList);
@@ -111,8 +147,12 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
         ) : (
           <List
             list={this.state.list}
+            editId={this.state.editId}
             toggleComplete={this.toggleCompleteHandler}
             deleteListItem={this.deleteItemHandler}
+            editListItem={this.editItemHandler}
+            cancelEditing={this.cancelEditingHandler}
+            saveListItem={this.saveItemHandler}
           />
         )}
         <AddForm addListItem={this.addListItemHandler} />

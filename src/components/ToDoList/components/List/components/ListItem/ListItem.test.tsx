@@ -3,7 +3,6 @@ import { mount } from "enzyme";
 import renderer from "react-test-renderer";
 
 import { ListItem } from "./ListItem";
-import { AddForm } from "../../../AddForm";
 
 const listItem1 = { id: 0, text: "Полить цветы", isComplete: true };
 const listItem2 = { id: 1, text: "Сделать ДЗ", isComplete: false };
@@ -19,6 +18,7 @@ describe("Component ListItem", () => {
             listItem={listItem1}
             toggleComplete={click}
             deleteListItem={click}
+            editListItem={click}
           />
         )
         .toJSON()
@@ -33,6 +33,7 @@ describe("Component ListItem", () => {
             listItem={listItem2}
             toggleComplete={click}
             deleteListItem={click}
+            editListItem={click}
           />
         )
         .toJSON()
@@ -45,6 +46,7 @@ describe("Component ListItem", () => {
         listItem={listItem1}
         toggleComplete={click}
         deleteListItem={click}
+        editListItem={click}
       />
     );
     wrapper.find("input").simulate("change");
@@ -56,6 +58,7 @@ describe("Component ListItem", () => {
         listItem={listItem2}
         toggleComplete={click}
         deleteListItem={click}
+        editListItem={click}
       />
     );
     wrapper.find("input").simulate("change");
@@ -68,9 +71,23 @@ describe("Component ListItem", () => {
         listItem={listItem2}
         toggleComplete={click}
         deleteListItem={click}
+        editListItem={click}
       />
     );
-    wrapper.find("button").simulate("click");
+    wrapper.find("button[name='deleteListItem']").simulate("click");
+    expect(click).toHaveBeenCalled();
+  });
+
+  it("should be able to click the button Edit Item", () => {
+    const wrapper = mount(
+      <ListItem
+        listItem={listItem2}
+        toggleComplete={click}
+        deleteListItem={click}
+        editListItem={click}
+      />
+    );
+    wrapper.find("button[name='editListItem']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 });

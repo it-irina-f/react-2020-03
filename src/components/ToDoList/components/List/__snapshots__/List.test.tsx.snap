@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component List renders list 1`] = `
+exports[`Component List render list where 1 editing item 1`] = `
 <div
   className="css-bb4zwd"
 >
@@ -15,6 +15,14 @@ exports[`Component List renders list 1`] = `
       Сделать ДЗ
     </label>
     <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
       onClick={[Function]}
       type="button"
     >
@@ -32,6 +40,14 @@ exports[`Component List renders list 1`] = `
       Приготовить ужин
     </label>
     <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
       onClick={[Function]}
       type="button"
     >
@@ -49,6 +65,144 @@ exports[`Component List renders list 1`] = `
       Уборка квартиры
     </label>
     <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="text_0"
+      onChange={[Function]}
+      placeholder="Переименовать задачу"
+      type="text"
+      value="Полить цветы"
+    />
+    <button
+      name="saveEditing"
+    >
+      Сохранить
+    </button>
+    <button
+      name="cancelEditing"
+      onClick={[Function]}
+      type="button"
+    >
+      Отмена
+    </button>
+  </form>
+  <div>
+    <label>
+      <input
+        checked={true}
+        name="checkbox_2"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Купить продукты
+    </label>
+    <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Component List renders list 1`] = `
+<div
+  className="css-bb4zwd"
+>
+  <div>
+    <label>
+      <input
+        checked={false}
+        name="checkbox_1"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Сделать ДЗ
+    </label>
+    <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
+  </div>
+  <div>
+    <label>
+      <input
+        checked={false}
+        name="checkbox_3"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Приготовить ужин
+    </label>
+    <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
+  </div>
+  <div>
+    <label>
+      <input
+        checked={false}
+        name="checkbox_4"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Уборка квартиры
+    </label>
+    <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
       onClick={[Function]}
       type="button"
     >
@@ -66,6 +220,14 @@ exports[`Component List renders list 1`] = `
       Полить цветы
     </label>
     <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
       onClick={[Function]}
       type="button"
     >
@@ -83,6 +245,14 @@ exports[`Component List renders list 1`] = `
       Купить продукты
     </label>
     <button
+      name="editListItem"
+      onClick={[Function]}
+      type="button"
+    >
+      Редактировать
+    </button>
+    <button
+      name="deleteListItem"
       onClick={[Function]}
       type="button"
     >

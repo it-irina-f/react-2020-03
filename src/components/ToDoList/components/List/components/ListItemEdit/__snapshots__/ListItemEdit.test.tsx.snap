@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component ListItemEdit renders form ListItemEdit 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    name="text_0"
+    onChange={[Function]}
+    placeholder="Переименовать задачу"
+    type="text"
+    value="Полить цветы"
+  />
+  <button
+    name="saveEditing"
+  >
+    Сохранить
+  </button>
+  <button
+    name="cancelEditing"
+    onClick={[Function]}
+    type="button"
+  >
+    Отмена
+  </button>
+</form>
+`;
