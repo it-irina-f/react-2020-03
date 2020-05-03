@@ -11,6 +11,12 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
     />
     Сделать ДЗ
   </label>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Удалить
+  </button>
 </div>
 `;
 
@@ -25,5 +31,11 @@ exports[`Component ListItem renders list item where isComplete=true 1`] = `
     />
     Полить цветы
   </label>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Удалить
+  </button>
 </div>
 `;

@@ -5,9 +5,14 @@ import type { ListItemProps, ToggleCompleteProps } from "types/todo";
 interface Props {
   listItem: ListItemProps;
   toggleComplete: ToggleCompleteProps;
+  deleteListItem: ToggleCompleteProps;
 }
 
-export const ListItem: React.FC<Props> = ({ listItem, toggleComplete }) => {
+export const ListItem: React.FC<Props> = ({
+  listItem,
+  toggleComplete,
+  deleteListItem,
+}) => {
   return (
     <div>
       <label>
@@ -19,6 +24,9 @@ export const ListItem: React.FC<Props> = ({ listItem, toggleComplete }) => {
         />
         {listItem.text}
       </label>
+      <button type="button" onClick={() => deleteListItem(listItem.id)}>
+        Удалить
+      </button>
     </div>
   );
 };

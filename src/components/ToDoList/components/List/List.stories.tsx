@@ -22,5 +22,6 @@ export const componentList = () => [
     key="jsx"
     list={object("list", list)}
     toggleComplete={action("Item clicked ")}
+    deleteListItem={action("Click for delete item")}
   />,
 ];

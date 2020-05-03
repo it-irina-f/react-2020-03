@@ -39,6 +39,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     };
     this.toggleCompleteHandler = this.toggleCompleteHandler.bind(this);
     this.addListItemHandler = this.addListItemHandler.bind(this);
+    this.deleteItemHandler = this.deleteItemHandler.bind(this);
   }
 
   componentDidMount(): void {
@@ -93,6 +94,14 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.updateList(newList);
   }
 
+  public deleteItemHandler(id: number): void {
+    const updList = this.state.list.filter((row) => {
+      return row.id !== id;
+    });
+
+    this.updateList(updList);
+  }
+
   render() {
     return (
       <ToDoListWrapper>
@@ -103,6 +112,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
           <List
             list={this.state.list}
             toggleComplete={this.toggleCompleteHandler}
+            deleteListItem={this.deleteItemHandler}
           />
         )}
         <AddForm addListItem={this.addListItemHandler} />

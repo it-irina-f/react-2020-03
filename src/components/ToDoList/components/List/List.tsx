@@ -14,6 +14,7 @@ const ListWrapper = styled.div`
 interface Props {
   list: ListItemProps[];
   toggleComplete: ToggleCompleteProps;
+  deleteListItem: ToggleCompleteProps;
 }
 
 interface State {
@@ -50,7 +51,10 @@ export class List extends React.Component<Props, State> {
       );
     }
 
-    if (propsList.every(isNoChange) === false) {
+    if (
+      propsList.every(isNoChange) === false ||
+      propsList.length !== stateList.length
+    ) {
       const newList = this.sortList(this.props.list);
 
       this.setState({
@@ -79,6 +83,7 @@ export class List extends React.Component<Props, State> {
             key={row.id}
             listItem={row}
             toggleComplete={this.props.toggleComplete}
+            deleteListItem={this.props.deleteListItem}
           />
         ))}
       </ListWrapper>

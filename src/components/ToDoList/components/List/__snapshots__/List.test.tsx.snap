@@ -14,6 +14,12 @@ exports[`Component List renders list 1`] = `
       />
       Сделать ДЗ
     </label>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
   </div>
   <div>
     <label>
@@ -25,6 +31,12 @@ exports[`Component List renders list 1`] = `
       />
       Приготовить ужин
     </label>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
   </div>
   <div>
     <label>
@@ -36,6 +48,12 @@ exports[`Component List renders list 1`] = `
       />
       Уборка квартиры
     </label>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
   </div>
   <div>
     <label>
@@ -47,6 +65,12 @@ exports[`Component List renders list 1`] = `
       />
       Полить цветы
     </label>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
   </div>
   <div>
     <label>
@@ -58,6 +82,12 @@ exports[`Component List renders list 1`] = `
       />
       Купить продукты
     </label>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Удалить
+    </button>
   </div>
 </div>
 `;
