@@ -1,5 +1,6 @@
 import React from "react";
-
+import { IconSave, IconX, IconButton, Input } from "sancho";
+import styled from "@emotion/styled";
 import type {
   ListItemProps,
   ToggleCompleteProps,
@@ -16,6 +17,13 @@ interface Props {
 interface State {
   textInput: string;
 }
+
+const FormWrapper = styled.form`
+  display: flex;
+  margin: 10px auto;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+`;
 
 export class ListItemEdit extends React.Component<Props, State> {
   state = {
@@ -35,23 +43,31 @@ export class ListItemEdit extends React.Component<Props, State> {
 
   render() {
     return (
-      <form onSubmit={this.submitHandler}>
-        <input
+      <FormWrapper onSubmit={this.submitHandler}>
+        <Input
+          inputSize="sm"
+          placeholder="Переименовать задачу"
           type="text"
           name={"text_" + this.props.listItem.id}
           value={this.state.textInput}
-          placeholder="Переименовать задачу"
           onChange={this.inputChangeHandle}
         />
-        <button name="saveEditing">Сохранить</button>
-        <button
+        <IconButton
+          icon={<IconSave />}
+          type="submit"
+          name="saveEditing"
+          label="saveEditing"
+          size="sm"
+        />
+        <IconButton
+          icon={<IconX />}
           type="button"
-          name="cancelEditing"
           onClick={() => this.props.cancelEditing()}
-        >
-          Отмена
-        </button>
-      </form>
+          label="cancelEditing"
+          name="cancelEditing"
+          size="sm"
+        />
+      </FormWrapper>
     );
   }
 }

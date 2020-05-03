@@ -1,5 +1,7 @@
 import React from "react";
+import { Button, Input } from "sancho";
 import type { AddFormProps } from "types/todo";
+import styled from "@emotion/styled";
 
 interface Props {
   addListItem: AddFormProps;
@@ -8,6 +10,10 @@ interface Props {
 interface State {
   textInput: string;
 }
+
+const FormWrapper = styled.form`
+  display: flex;
+`;
 
 export class AddForm extends React.Component<Props, State> {
   state = {
@@ -30,17 +36,19 @@ export class AddForm extends React.Component<Props, State> {
 
   render() {
     return (
-      <form onSubmit={this.submitHandler}>
-        <input
+      <FormWrapper onSubmit={this.submitHandler}>
+        <Input
+          inputSize="md"
+          placeholder="Добавить новую задачу"
           type="text"
           name="addlistItem"
-          placeholder="Добавить новую задачу"
           value={this.state.textInput}
           onChange={this.inputChangeHandle}
         />
-
-        <button>Добавить</button>
-      </form>
+        <Button intent="primary" type="submit">
+          Добавить
+        </Button>
+      </FormWrapper>
     );
   }
 }

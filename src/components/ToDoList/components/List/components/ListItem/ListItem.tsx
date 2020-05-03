@@ -1,5 +1,6 @@
 import React from "react";
-
+import { IconEdit, IconTrash2, IconButton } from "sancho";
+import styled from "@emotion/styled";
 import type { ListItemProps, ToggleCompleteProps } from "types/todo";
 
 interface Props {
@@ -9,6 +10,17 @@ interface Props {
   editListItem: ToggleCompleteProps;
 }
 
+const ListItemWrapper = styled.div`
+  display: flex;
+  margin: 10px auto;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+`;
+
+const LabelWrapper = styled.label`
+  flex-grow: 1;
+`;
+
 export const ListItem: React.FC<Props> = ({
   listItem,
   toggleComplete,
@@ -16,8 +28,8 @@ export const ListItem: React.FC<Props> = ({
   editListItem,
 }) => {
   return (
-    <div>
-      <label>
+    <ListItemWrapper>
+      <LabelWrapper>
         <input
           type="checkbox"
           name={"checkbox_" + listItem.id}
@@ -25,21 +37,21 @@ export const ListItem: React.FC<Props> = ({
           onChange={() => toggleComplete(listItem.id)}
         />
         {listItem.text}
-      </label>
-      <button
+      </LabelWrapper>
+      <IconButton
+        icon={<IconEdit />}
         type="button"
-        name="editListItem"
         onClick={() => editListItem(listItem.id)}
-      >
-        Редактировать
-      </button>
-      <button
+        label="editListItem"
+        size="sm"
+      />
+      <IconButton
+        icon={<IconTrash2 />}
         type="button"
-        name="deleteListItem"
         onClick={() => deleteListItem(listItem.id)}
-      >
-        Удалить
-      </button>
-    </div>
+        label="deleteListItem"
+        size="sm"
+      />
+    </ListItemWrapper>
   );
 };

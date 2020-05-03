@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ListItem renders list item where isComplete=false 1`] = `
-<div>
-  <label>
+<div
+  className="css-16suo3h"
+>
+  <label
+    className="css-w6gvpm"
+  >
     <input
       checked={false}
       name="checkbox_1"
@@ -11,26 +15,144 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
     />
     Сделать ДЗ
   </label>
-  <button
-    name="editListItem"
+  <div
+    className="Button Touchable css-gqylg5"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
     type="button"
   >
-    Редактировать
-  </button>
-  <button
-    name="deleteListItem"
+    <div
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": "1px",
+        }
+      }
+    >
+      editListItem
+    </div>
+    <svg
+      aria-hidden={true}
+      fill="none"
+      height="16px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="16px"
+    >
+      <path
+        d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+      />
+      <path
+        d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+      />
+    </svg>
+  </div>
+  <div
+    className="Button Touchable css-gqylg5"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
     type="button"
   >
-    Удалить
-  </button>
+    <div
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": "1px",
+        }
+      }
+    >
+      deleteListItem
+    </div>
+    <svg
+      aria-hidden={true}
+      fill="none"
+      height="16px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="16px"
+    >
+      <polyline
+        points="3 6 5 6 21 6"
+      />
+      <path
+        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+      />
+      <line
+        x1="10"
+        x2="10"
+        y1="11"
+        y2="17"
+      />
+      <line
+        x1="14"
+        x2="14"
+        y1="11"
+        y2="17"
+      />
+    </svg>
+  </div>
 </div>
 `;
 
 exports[`Component ListItem renders list item where isComplete=true 1`] = `
-<div>
-  <label>
+<div
+  className="css-16suo3h"
+>
+  <label
+    className="css-w6gvpm"
+  >
     <input
       checked={true}
       name="checkbox_0"
@@ -39,19 +161,133 @@ exports[`Component ListItem renders list item where isComplete=true 1`] = `
     />
     Полить цветы
   </label>
-  <button
-    name="editListItem"
+  <div
+    className="Button Touchable css-gqylg5"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
     type="button"
   >
-    Редактировать
-  </button>
-  <button
-    name="deleteListItem"
+    <div
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": "1px",
+        }
+      }
+    >
+      editListItem
+    </div>
+    <svg
+      aria-hidden={true}
+      fill="none"
+      height="16px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="16px"
+    >
+      <path
+        d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+      />
+      <path
+        d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+      />
+    </svg>
+  </div>
+  <div
+    className="Button Touchable css-gqylg5"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
     type="button"
   >
-    Удалить
-  </button>
+    <div
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": "1px",
+        }
+      }
+    >
+      deleteListItem
+    </div>
+    <svg
+      aria-hidden={true}
+      fill="none"
+      height="16px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="16px"
+    >
+      <polyline
+        points="3 6 5 6 21 6"
+      />
+      <path
+        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+      />
+      <line
+        x1="10"
+        x2="10"
+        y1="11"
+        y2="17"
+      />
+      <line
+        x1="14"
+        x2="14"
+        y1="11"
+        y2="17"
+      />
+    </svg>
+  </div>
 </div>
 `;

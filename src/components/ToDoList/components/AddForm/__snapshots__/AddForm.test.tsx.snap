@@ -2,17 +2,42 @@
 
 exports[`Test Component AddForm renders AddForm 1`] = `
 <form
+  className="css-ov1ktg"
   onSubmit={[Function]}
 >
   <input
+    className="Input css-1q13pxr"
     name="addlistItem"
     onChange={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
     placeholder="Добавить новую задачу"
     type="text"
     value=""
   />
-  <button>
-    Добавить
+  <button
+    className="Button Touchable css-1q0hrqc"
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+    type="submit"
+  >
+    <span
+      aria-hidden={false}
+      className="css-1kd7cij"
+    >
+      Добавить
+    </span>
   </button>
 </form>
 `;
