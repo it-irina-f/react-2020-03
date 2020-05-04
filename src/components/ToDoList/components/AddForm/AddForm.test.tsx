@@ -15,9 +15,6 @@ describe("Test Component AddForm", () => {
 
   it("should be able to click the button", () => {
     const element = mount(<AddForm addListItem={click} />);
-    element.find("input").simulate("change", {
-      target: { value: "оплатить жкх" },
-    });
     element.find("button").simulate("submit");
     expect(click).toHaveBeenCalled();
   });

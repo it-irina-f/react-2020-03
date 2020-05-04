@@ -3,15 +3,15 @@ import { IconSave, IconX, IconButton, Input } from "sancho";
 import styled from "@emotion/styled";
 import type {
   ListItemProps,
-  ToggleCompleteProps,
-  saveListItemProps,
-  cancelEditingProps,
+  TypeIdNumber,
+  TypeSaveListItem,
+  TypeCancelEditing,
 } from "types/todo";
 
 interface Props {
   listItem: ListItemProps;
-  saveListItem: saveListItemProps;
-  cancelEditing: cancelEditingProps;
+  saveListItem: TypeSaveListItem;
+  cancelEditing: TypeCancelEditing;
 }
 
 interface State {

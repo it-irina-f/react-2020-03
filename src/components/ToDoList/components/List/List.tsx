@@ -2,9 +2,9 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import type {
   ListItemProps,
-  ToggleCompleteProps,
-  saveListItemProps,
-  cancelEditingProps,
+  TypeIdNumber,
+  TypeSaveListItem,
+  TypeCancelEditing,
 } from "types/todo";
 
 import { ListItem, ListItemEdit } from "./components";
@@ -20,11 +20,11 @@ const ListWrapper = styled.div`
 
 interface Props {
   list: ListItemProps[];
-  toggleComplete: ToggleCompleteProps;
-  deleteListItem: ToggleCompleteProps;
-  editListItem: ToggleCompleteProps;
-  cancelEditing: cancelEditingProps;
-  saveListItem: saveListItemProps;
+  toggleComplete: TypeIdNumber;
+  deleteListItem: TypeIdNumber;
+  editListItem: TypeIdNumber;
+  cancelEditing: TypeCancelEditing;
+  saveListItem: TypeSaveListItem;
   editId: number;
 }
 
@@ -51,22 +51,24 @@ export class List extends React.Component<Props, State> {
     const propsList = this.props.list;
     const stateList = this.state.list;
 
-    function isNoChange(propsRow: ListItemProps) {
-      return (
-        stateList.filter((stateRow) => {
-          return (
-            stateRow.id === propsRow.id &&
-            stateRow.isComplete === propsRow.isComplete &&
-            stateRow.text === propsRow.text
-          );
-        }).length > 0
-      );
+    function isAnyChange() {
+      if (propsList.length !== stateList.length) {
+        return true;
+      } else {
+        const isNoChange = propsList.every((propsRow) => {
+          return stateList.find((stateRow) => {
+            return (
+              stateRow.id === propsRow.id &&
+              stateRow.isComplete === propsRow.isComplete &&
+              stateRow.text === propsRow.text
+            );
+          });
+        });
+        return !isNoChange;
+      }
     }
 
-    if (
-      propsList.every(isNoChange) === false ||
-      propsList.length !== stateList.length
-    ) {
+    if (isAnyChange()) {
       const newList = this.sortList(this.props.list);
 
       this.setState({
@@ -89,28 +91,27 @@ export class List extends React.Component<Props, State> {
 
   render() {
     const editId = this.props.editId;
+    const itemList = this.state.list.map((row) =>
+      row.id === editId ? (
+        <ListItemEdit
+          key={row.id}
+          listItem={row}
+          cancelEditing={this.props.cancelEditing}
+          saveListItem={this.props.saveListItem}
+        />
+      ) : (
+        <ListItem
+          key={row.id}
+          listItem={row}
+          toggleComplete={this.props.toggleComplete}
+          deleteListItem={this.props.deleteListItem}
+          editListItem={this.props.editListItem}
+        />
+      )
+    );
     return (
       <ListWrapper>
-        {this.state.list.length === 0
-          ? "Список пустой"
-          : this.state.list.map((row) =>
-              row.id === editId ? (
-                <ListItemEdit
-                  key={row.id}
-                  listItem={row}
-                  cancelEditing={this.props.cancelEditing}
-                  saveListItem={this.props.saveListItem}
-                />
-              ) : (
-                <ListItem
-                  key={row.id}
-                  listItem={row}
-                  toggleComplete={this.props.toggleComplete}
-                  deleteListItem={this.props.deleteListItem}
-                  editListItem={this.props.editListItem}
-                />
-              )
-            )}
+        {this.state.list.length === 0 ? "Список пустой" : itemList}
       </ListWrapper>
     );
   }

@@ -8,10 +8,10 @@ export interface ListProps {
   list: ListItemProps[];
 }
 
-export type ToggleCompleteProps = (id: number) => void;
+export type TypeIdNumber = (id: number) => void;
 
-export type AddFormProps = (text: string) => void;
+export type TypeAddForm = (text: string) => void;
 
-export type saveListItemProps = (id: number, text: string) => void;
+export type TypeSaveListItem = (id: number, text: string) => void;
 
-export type cancelEditingProps = () => void;
+export type TypeCancelEditing = () => void;

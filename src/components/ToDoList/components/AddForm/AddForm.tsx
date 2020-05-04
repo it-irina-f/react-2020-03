@@ -1,13 +1,13 @@
 import React from "react";
 import { Button, Input } from "sancho";
-import type { AddFormProps } from "types/todo";
+import type { TypeAddForm } from "types/todo";
 import styled from "@emotion/styled";
 
-interface Props {
-  addListItem: AddFormProps;
+interface AddFormProps {
+  addListItem: TypeAddForm;
 }
 
-interface State {
+interface AddFormState {
   textInput: string;
 }
 
@@ -15,7 +15,7 @@ const FormWrapper = styled.form`
   display: flex;
 `;
 
-export class AddForm extends React.Component<Props, State> {
+export class AddForm extends React.Component<AddFormProps, AddFormState> {
   state = {
     textInput: "",
   };

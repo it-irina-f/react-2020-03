@@ -62,7 +62,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     );
     this.setState({
       isLoading: false,
-      list: Array.isArray(todosFromLocalStorage)? todosFromLocalStorage : [],
+      list: Array.isArray(todosFromLocalStorage) ? todosFromLocalStorage : [],
     });
   }
 
@@ -92,7 +92,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     const newList = [
       ...this.state.list,
       {
-        id: Math.floor(Math.random() * 1000000),
+        id: Date.now(),
         text: text,
         isComplete: false,
       },
@@ -128,7 +128,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
 
     const updList = this.state.list.map((row) => {
       if (row.id === id) {
-        return { ...row, text: text };
+        return { ...row, text };
       }
       return row;
     });

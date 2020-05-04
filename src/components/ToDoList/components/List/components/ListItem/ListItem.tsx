@@ -1,13 +1,13 @@
 import React from "react";
 import { IconEdit, IconTrash2, IconButton } from "sancho";
 import styled from "@emotion/styled";
-import type { ListItemProps, ToggleCompleteProps } from "types/todo";
+import type { ListItemProps, TypeIdNumber } from "types/todo";
 
 interface Props {
   listItem: ListItemProps;
-  toggleComplete: ToggleCompleteProps;
-  deleteListItem: ToggleCompleteProps;
-  editListItem: ToggleCompleteProps;
+  toggleComplete: TypeIdNumber;
+  deleteListItem: TypeIdNumber;
+  editListItem: TypeIdNumber;
 }
 
 const ListItemWrapper = styled.div`
