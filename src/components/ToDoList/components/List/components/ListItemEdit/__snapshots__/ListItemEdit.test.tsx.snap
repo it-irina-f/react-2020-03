@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component ListItemEdit renders form ListItemEdit 1`] = `
+<form
+  className="css-16suo3h"
+  onSubmit={[Function]}
+>
+  <input
+    className="Input css-i909sp"
+    name="text_0"
+    onChange={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    placeholder="Переименовать задачу"
+    type="text"
+    value="Полить цветы"
+  />
+  <button
+    className="Button Touchable css-gqylg5"
+    name="saveEditing"
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+    type="submit"
+  >
+    <div
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": "1px",
+        }
+      }
+    >
+      saveEditing
+    </div>
+    <svg
+      aria-hidden={true}
+      fill="none"
+      height="16px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="16px"
+    >
+      <path
+        d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+      />
+      <polyline
+        points="17 21 17 13 7 13 7 21"
+      />
+      <polyline
+        points="7 3 7 8 15 8"
+      />
+    </svg>
+  </button>
+  <div
+    className="Button Touchable css-gqylg5"
+    name="cancelEditing"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+    type="button"
+  >
+    <div
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": "1px",
+        }
+      }
+    >
+      cancelEditing
+    </div>
+    <svg
+      aria-hidden={true}
+      fill="none"
+      height="16px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="16px"
+    >
+      <line
+        x1="18"
+        x2="6"
+        y1="6"
+        y2="18"
+      />
+      <line
+        x1="6"
+        x2="18"
+        y1="6"
+        y2="18"
+      />
+    </svg>
+  </div>
+</form>
+`;

@@ -1,7 +1,5 @@
 import React from "react";
 import { render } from "react-dom";
+import { ToDoList } from "./components";
 
-import { ClickCounter } from "./ClickCounter";
-import { HelloUser } from "./HelloUser";
-
-render(<ClickCounter start={1} />, document.getElementById("root"));
+render(<ToDoList />, document.getElementById("root"));

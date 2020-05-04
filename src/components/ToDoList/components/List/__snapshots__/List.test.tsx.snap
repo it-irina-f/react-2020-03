@@ -1,0 +1,1451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component List render list where 1 editing item 1`] = `
+<div
+  className="css-1cjbtm3"
+>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={false}
+        name="checkbox_1"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Сделать ДЗ
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={false}
+        name="checkbox_3"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Приготовить ужин
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={false}
+        name="checkbox_4"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Уборка квартиры
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+  <form
+    className="css-16suo3h"
+    onSubmit={[Function]}
+  >
+    <input
+      className="Input css-i909sp"
+      name="text_0"
+      onChange={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      placeholder="Переименовать задачу"
+      type="text"
+      value="Полить цветы"
+    />
+    <button
+      className="Button Touchable css-gqylg5"
+      name="saveEditing"
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="submit"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        saveEditing
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+        />
+        <polyline
+          points="17 21 17 13 7 13 7 21"
+        />
+        <polyline
+          points="7 3 7 8 15 8"
+        />
+      </svg>
+    </button>
+    <div
+      className="Button Touchable css-gqylg5"
+      name="cancelEditing"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        cancelEditing
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <line
+          x1="18"
+          x2="6"
+          y1="6"
+          y2="18"
+        />
+        <line
+          x1="6"
+          x2="18"
+          y1="6"
+          y2="18"
+        />
+      </svg>
+    </div>
+  </form>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={true}
+        name="checkbox_2"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Купить продукты
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component List renders empty list 1`] = `
+<div
+  className="css-1cjbtm3"
+>
+  Список пустой
+</div>
+`;
+
+exports[`Component List renders list 1`] = `
+<div
+  className="css-1cjbtm3"
+>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={false}
+        name="checkbox_1"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Сделать ДЗ
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={false}
+        name="checkbox_3"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Приготовить ужин
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={false}
+        name="checkbox_4"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Уборка квартиры
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={true}
+        name="checkbox_0"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Полить цветы
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="css-16suo3h"
+  >
+    <label
+      className="css-w6gvpm"
+    >
+      <input
+        checked={true}
+        name="checkbox_2"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Купить продукты
+    </label>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        editListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+        />
+        <path
+          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="Button Touchable css-gqylg5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchMoveCapture={[Function]}
+      onTouchStart={[Function]}
+      onTouchStartCapture={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <div
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "height": "1px",
+            "margin": "-1px",
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "width": "1px",
+          }
+        }
+      >
+        deleteListItem
+      </div>
+      <svg
+        aria-hidden={true}
+        fill="none"
+        height="16px"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <polyline
+          points="3 6 5 6 21 6"
+        />
+        <path
+          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        />
+        <line
+          x1="10"
+          x2="10"
+          y1="11"
+          y2="17"
+        />
+        <line
+          x1="14"
+          x2="14"
+          y1="11"
+          y2="17"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
