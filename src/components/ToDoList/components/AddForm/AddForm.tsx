@@ -1,33 +1,54 @@
-import React, { useRef } from "react";
-import type { AddFormProps } from "types/todo";
+import React from "react";
+import { Button, Input } from "sancho";
+import type { TypeAddForm } from "types/todo";
+import styled from "@emotion/styled";
 
-interface Props {
-  addListItem: AddFormProps;
+interface AddFormProps {
+  addListItem: TypeAddForm;
 }
 
-export const AddForm: React.FC<Props> = ({ addListItem }) => {
-  const itemText = useRef(null);
+interface AddFormState {
+  textInput: string;
+}
 
-  const submitHandler = (): void => {
-    const listItem = itemText.current.value || "";
-    if (listItem.length) {
-      addListItem(listItem);
-      itemText.current.value = "";
-    }
+const FormWrapper = styled.form`
+  display: flex;
+`;
+
+export class AddForm extends React.Component<AddFormProps, AddFormState> {
+  state = {
+    textInput: "",
   };
 
-  return (
-    <form>
-      <input
-        type="text"
-        name="addlistItem"
-        placeholder="Добавить новую задачу"
-        ref={itemText}
-      />
+  submitHandler = (ev: React.FormEvent) => {
+    ev.preventDefault();
+    this.props.addListItem(this.state.textInput);
+    this.setState({
+      textInput: "",
+    });
+  };
 
-      <button type="button" onClick={submitHandler}>
-        Добавить
-      </button>
-    </form>
-  );
-};
+  inputChangeHandle = (ev: React.ChangeEvent) => {
+    this.setState({
+      textInput: (ev.target as HTMLInputElement).value,
+    });
+  };
+
+  render() {
+    return (
+      <FormWrapper onSubmit={this.submitHandler}>
+        <Input
+          inputSize="md"
+          placeholder="Добавить новую задачу"
+          type="text"
+          name="addlistItem"
+          value={this.state.textInput}
+          onChange={this.inputChangeHandle}
+        />
+        <Button intent="primary" type="submit">
+          Добавить
+        </Button>
+      </FormWrapper>
+    );
+  }
+}

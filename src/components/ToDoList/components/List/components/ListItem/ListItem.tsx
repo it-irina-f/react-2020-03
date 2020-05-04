@@ -1,16 +1,35 @@
 import React from "react";
-
-import type { ListItemProps, ToggleCompleteProps } from "types/todo";
+import { IconEdit, IconTrash2, IconButton } from "sancho";
+import styled from "@emotion/styled";
+import type { ListItemProps, TypeIdNumber } from "types/todo";
 
 interface Props {
   listItem: ListItemProps;
-  toggleComplete: ToggleCompleteProps;
+  toggleComplete: TypeIdNumber;
+  deleteListItem: TypeIdNumber;
+  editListItem: TypeIdNumber;
 }
 
-export const ListItem: React.FC<Props> = ({ listItem, toggleComplete }) => {
+const ListItemWrapper = styled.div`
+  display: flex;
+  margin: 10px auto;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+`;
+
+const LabelWrapper = styled.label`
+  flex-grow: 1;
+`;
+
+export const ListItem: React.FC<Props> = ({
+  listItem,
+  toggleComplete,
+  deleteListItem,
+  editListItem,
+}) => {
   return (
-    <div>
-      <label>
+    <ListItemWrapper>
+      <LabelWrapper>
         <input
           type="checkbox"
           name={"checkbox_" + listItem.id}
@@ -18,7 +37,21 @@ export const ListItem: React.FC<Props> = ({ listItem, toggleComplete }) => {
           onChange={() => toggleComplete(listItem.id)}
         />
         {listItem.text}
-      </label>
-    </div>
+      </LabelWrapper>
+      <IconButton
+        icon={<IconEdit />}
+        type="button"
+        onClick={() => editListItem(listItem.id)}
+        label="editListItem"
+        size="sm"
+      />
+      <IconButton
+        icon={<IconTrash2 />}
+        type="button"
+        onClick={() => deleteListItem(listItem.id)}
+        label="deleteListItem"
+        size="sm"
+      />
+    </ListItemWrapper>
   );
 };

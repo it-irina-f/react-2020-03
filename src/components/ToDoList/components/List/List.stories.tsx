@@ -20,7 +20,25 @@ const list = [
 export const componentList = () => [
   <List
     key="jsx"
+    editId={-1}
     list={object("list", list)}
-    toggleComplete={action("Item clicked ")}
+    toggleComplete={action("Item clicked")}
+    deleteListItem={action("Click for delete item")}
+    editListItem={action("Click for edit item")}
+    cancelEditing={action("Click for cancel editing")}
+    saveListItem={action("Click for save editing")}
+  />,
+];
+
+export const componentListEdit = () => [
+  <List
+    key="jsx"
+    editId={1}
+    list={object("list", list)}
+    toggleComplete={action("Item clicked")}
+    deleteListItem={action("Click for delete item")}
+    editListItem={action("Click for edit item")}
+    cancelEditing={action("Click for cancel editing")}
+    saveListItem={action("Click for save editing")}
   />,
 ];

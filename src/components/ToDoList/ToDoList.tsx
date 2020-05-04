@@ -12,6 +12,7 @@ interface ToDoListProps {
 interface ToDoListState {
   list: ListItemProps[];
   isLoading: boolean;
+  editId: number;
 }
 
 const ToDoListWrapper = styled.div`
@@ -19,7 +20,6 @@ const ToDoListWrapper = styled.div`
   width: 500px;
   margin: 10px auto;
   padding: 20px 50px;
-  background: #eaeaea;
 `;
 
 const TitleWrapper = styled.div`
@@ -36,9 +36,14 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.state = {
       list: [],
       isLoading: true,
+      editId: -1,
     };
     this.toggleCompleteHandler = this.toggleCompleteHandler.bind(this);
     this.addListItemHandler = this.addListItemHandler.bind(this);
+    this.deleteItemHandler = this.deleteItemHandler.bind(this);
+    this.editItemHandler = this.editItemHandler.bind(this);
+    this.cancelEditingHandler = this.cancelEditingHandler.bind(this);
+    this.saveItemHandler = this.saveItemHandler.bind(this);
   }
 
   componentDidMount(): void {
@@ -55,10 +60,9 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     const todosFromLocalStorage = reactLocalStorage.getObject(
       "localStorageTodos"
     );
-
     this.setState({
       isLoading: false,
-      list: todosFromLocalStorage || [],
+      list: Array.isArray(todosFromLocalStorage) ? todosFromLocalStorage : [],
     });
   }
 
@@ -87,10 +91,49 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   public addListItemHandler(text: string): void {
     const newList = [
       ...this.state.list,
-      { id: this.state.list.length, text: text, isComplete: false },
+      {
+        id: Date.now(),
+        text: text,
+        isComplete: false,
+      },
     ];
 
     this.updateList(newList);
+  }
+
+  public deleteItemHandler(id: number): void {
+    const updList = this.state.list.filter((row) => {
+      return row.id !== id;
+    });
+
+    this.updateList(updList);
+  }
+
+  public editItemHandler(id: number): void {
+    this.setState({
+      editId: id,
+    });
+  }
+
+  public cancelEditingHandler(): void {
+    this.setState({
+      editId: -1,
+    });
+  }
+
+  public saveItemHandler(id: number, text: string): void {
+    this.setState({
+      editId: -1,
+    });
+
+    const updList = this.state.list.map((row) => {
+      if (row.id === id) {
+        return { ...row, text };
+      }
+      return row;
+    });
+
+    this.updateList(updList);
   }
 
   render() {
@@ -102,7 +145,12 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
         ) : (
           <List
             list={this.state.list}
+            editId={this.state.editId}
             toggleComplete={this.toggleCompleteHandler}
+            deleteListItem={this.deleteItemHandler}
+            editListItem={this.editItemHandler}
+            cancelEditing={this.cancelEditingHandler}
+            saveListItem={this.saveItemHandler}
           />
         )}
         <AddForm addListItem={this.addListItemHandler} />
