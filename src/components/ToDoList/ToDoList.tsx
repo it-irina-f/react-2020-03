@@ -38,12 +38,6 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       isLoading: true,
       editId: -1,
     };
-    this.toggleCompleteHandler = this.toggleCompleteHandler.bind(this);
-    this.addListItemHandler = this.addListItemHandler.bind(this);
-    this.deleteItemHandler = this.deleteItemHandler.bind(this);
-    this.editItemHandler = this.editItemHandler.bind(this);
-    this.cancelEditingHandler = this.cancelEditingHandler.bind(this);
-    this.saveItemHandler = this.saveItemHandler.bind(this);
   }
 
   componentDidMount(): void {
@@ -77,7 +71,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     );
   }
 
-  public toggleCompleteHandler(id: number): void {
+  toggleCompleteHandler = (id: number) => {
     const updList = this.state.list.map((row) => {
       if (row.id === id) {
         return { ...row, isComplete: !row.isComplete };
@@ -86,9 +80,9 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     });
 
     this.updateList(updList);
-  }
+  };
 
-  public addListItemHandler(text: string): void {
+  addListItemHandler = (text: string) => {
     const newList = [
       ...this.state.list,
       {
@@ -99,29 +93,29 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     ];
 
     this.updateList(newList);
-  }
+  };
 
-  public deleteItemHandler(id: number): void {
+  deleteItemHandler = (id: number) => {
     const updList = this.state.list.filter((row) => {
       return row.id !== id;
     });
 
     this.updateList(updList);
-  }
+  };
 
-  public editItemHandler(id: number): void {
+  editItemHandler = (id: number) => {
     this.setState({
       editId: id,
     });
-  }
+  };
 
-  public cancelEditingHandler(): void {
+  cancelEditingHandler = () => {
     this.setState({
       editId: -1,
     });
-  }
+  };
 
-  public saveItemHandler(id: number, text: string): void {
+  saveItemHandler = (id: number, text: string) => {
     this.setState({
       editId: -1,
     });
@@ -134,7 +128,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     });
 
     this.updateList(updList);
-  }
+  };
 
   render() {
     return (
