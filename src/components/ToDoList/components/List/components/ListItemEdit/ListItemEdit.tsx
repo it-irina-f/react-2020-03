@@ -11,7 +11,7 @@ import type {
 interface Props {
   listItem: ListItemProps;
   saveListItem: TypeSaveListItem;
-  cancelEditing: TypeCancelEditing;
+  handleEdit: TypeIdNumber;
 }
 
 interface State {
@@ -62,7 +62,7 @@ export class ListItemEdit extends React.Component<Props, State> {
         <IconButton
           icon={<IconX />}
           type="button"
-          onClick={() => this.props.cancelEditing()}
+          onClick={() => this.props.handleEdit(-1)}
           label="cancelEditing"
           name="cancelEditing"
           size="sm"

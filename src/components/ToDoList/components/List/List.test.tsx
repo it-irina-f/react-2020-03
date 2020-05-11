@@ -23,8 +23,7 @@ describe("Component List", () => {
             list={list}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
             editId={-1}
           />
@@ -40,8 +39,7 @@ describe("Component List", () => {
             list={list}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
             editId={0}
           />
@@ -57,8 +55,7 @@ describe("Component List", () => {
             list={[]}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
             editId={-1}
           />
@@ -73,8 +70,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -89,8 +85,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -109,8 +104,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -125,8 +119,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -141,8 +134,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -158,8 +150,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -175,8 +166,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -191,8 +181,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -211,8 +200,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={1}
       />
@@ -228,8 +216,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={1}
       />
@@ -244,8 +231,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={1}
       />
@@ -260,8 +246,7 @@ describe("Component List", () => {
         list={[]}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />

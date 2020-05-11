@@ -16,7 +16,7 @@ describe("Component ListItemEdit", () => {
         .create(
           <ListItemEdit
             listItem={listItem1}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
           />
         )
@@ -28,7 +28,7 @@ describe("Component ListItemEdit", () => {
     const wrapper = mount(
       <ListItemEdit
         listItem={listItem2}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
       />
     );
@@ -43,7 +43,7 @@ describe("Component ListItemEdit", () => {
     const wrapper = mount(
       <ListItemEdit
         listItem={listItem2}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
       />
     );

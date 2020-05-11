@@ -7,7 +7,7 @@ interface Props {
   listItem: ListItemProps;
   toggleComplete: TypeIdNumber;
   deleteListItem: TypeIdNumber;
-  editListItem: TypeIdNumber;
+  handleEdit: TypeIdNumber;
 }
 
 const ListItemWrapper = styled.div`
@@ -25,7 +25,7 @@ export const ListItem: React.FC<Props> = ({
   listItem,
   toggleComplete,
   deleteListItem,
-  editListItem,
+  handleEdit,
 }) => {
   return (
     <ListItemWrapper>
@@ -41,7 +41,7 @@ export const ListItem: React.FC<Props> = ({
       <IconButton
         icon={<IconEdit />}
         type="button"
-        onClick={() => editListItem(listItem.id)}
+        onClick={() => handleEdit(listItem.id)}
         label="editListItem"
         size="sm"
       />

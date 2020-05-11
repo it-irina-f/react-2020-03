@@ -1,5 +1,5 @@
 import React from "react";
-import type { ListItemProps } from "types/todo";
+import type { ListItemProps, TypeIdNumber } from "types/todo";
 import { List } from "./components/List";
 import { AddForm } from "./components/AddForm";
 import styled from "@emotion/styled";
@@ -103,23 +103,13 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.updateList(updList);
   };
 
-  editItemHandler = (id: number) => {
+  editHandler = (id: number) => {
     this.setState({
       editId: id,
     });
   };
 
-  cancelEditingHandler = () => {
-    this.setState({
-      editId: -1,
-    });
-  };
-
   saveItemHandler = (id: number, text: string) => {
-    this.setState({
-      editId: -1,
-    });
-
     const updList = this.state.list.map((row) => {
       if (row.id === id) {
         return { ...row, text };
@@ -128,6 +118,8 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     });
 
     this.updateList(updList);
+
+    this.editHandler(-1);
   };
 
   render() {
@@ -142,8 +134,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
             editId={this.state.editId}
             toggleComplete={this.toggleCompleteHandler}
             deleteListItem={this.deleteItemHandler}
-            editListItem={this.editItemHandler}
-            cancelEditing={this.cancelEditingHandler}
+            handleEdit={this.editHandler}
             saveListItem={this.saveItemHandler}
           />
         )}

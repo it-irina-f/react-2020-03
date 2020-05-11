@@ -22,8 +22,7 @@ interface Props {
   list: ListItemProps[];
   toggleComplete: TypeIdNumber;
   deleteListItem: TypeIdNumber;
-  editListItem: TypeIdNumber;
-  cancelEditing: TypeCancelEditing;
+  handleEdit: TypeIdNumber;
   saveListItem: TypeSaveListItem;
   editId: number;
 }
@@ -96,8 +95,8 @@ export class List extends React.Component<Props, State> {
         <ListItemEdit
           key={row.id}
           listItem={row}
-          cancelEditing={this.props.cancelEditing}
           saveListItem={this.props.saveListItem}
+          handleEdit={this.props.handleEdit}
         />
       ) : (
         <ListItem
@@ -105,7 +104,7 @@ export class List extends React.Component<Props, State> {
           listItem={row}
           toggleComplete={this.props.toggleComplete}
           deleteListItem={this.props.deleteListItem}
-          editListItem={this.props.editListItem}
+          handleEdit={this.props.handleEdit}
         />
       )
     );
