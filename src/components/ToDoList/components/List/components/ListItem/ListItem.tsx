@@ -1,6 +1,7 @@
 import React from "react";
 import { IconEdit, IconTrash2, IconButton } from "sancho";
 import styled from "@emotion/styled";
+import { ManageButton } from "../Buttons";
 import type { ListItemProps, TypeIdNumber } from "types/todo";
 
 interface Props {
@@ -38,21 +39,17 @@ export const ListItem: React.FC<Props> = ({
         />
         {listItem.text}
       </LabelWrapper>
-      <IconButton
+      <ManageButton
         icon={<IconEdit />}
-        type="button"
         onClick={() => handleEdit(listItem.id)}
         label="editListItem"
         id={"editListItem_" + listItem.id}
-        size="sm"
       />
-      <IconButton
+      <ManageButton
         icon={<IconTrash2 />}
-        type="button"
         onClick={() => deleteListItem(listItem.id)}
         label="deleteListItem"
         id={"deleteListItem_" + listItem.id}
-        size="sm"
       />
     </ListItemWrapper>
   );
