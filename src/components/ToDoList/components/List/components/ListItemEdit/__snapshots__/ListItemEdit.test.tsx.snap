@@ -78,6 +78,7 @@ exports[`Component ListItemEdit renders form ListItemEdit 1`] = `
   </button>
   <div
     className="Button Touchable css-gqylg5"
+    id="cancelEditing_0"
     name="cancelEditing"
     onClick={[Function]}
     onKeyDown={[Function]}

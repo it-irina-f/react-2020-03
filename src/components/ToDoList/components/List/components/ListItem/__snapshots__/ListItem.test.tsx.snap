@@ -17,6 +17,7 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
   </label>
   <div
     className="Button Touchable css-gqylg5"
+    id="editListItem_1"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -75,6 +76,7 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
   </div>
   <div
     className="Button Touchable css-gqylg5"
+    id="deleteListItem_1"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -163,6 +165,7 @@ exports[`Component ListItem renders list item where isComplete=true 1`] = `
   </label>
   <div
     className="Button Touchable css-gqylg5"
+    id="editListItem_0"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -221,6 +224,7 @@ exports[`Component ListItem renders list item where isComplete=true 1`] = `
   </div>
   <div
     className="Button Touchable css-gqylg5"
+    id="deleteListItem_0"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}

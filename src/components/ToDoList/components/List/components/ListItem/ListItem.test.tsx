@@ -74,7 +74,7 @@ describe("Component ListItem", () => {
         handleEdit={click}
       />
     );
-    wrapper.find("button[name='deleteListItem']").simulate("click");
+    wrapper.find("div[id='deleteListItem_1']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 
@@ -87,7 +87,7 @@ describe("Component ListItem", () => {
         handleEdit={click}
       />
     );
-    wrapper.find("button[name='editListItem']").simulate("click");
+    wrapper.find("div[id='editListItem_1']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 });

@@ -43,6 +43,7 @@ export const ListItem: React.FC<Props> = ({
         type="button"
         onClick={() => handleEdit(listItem.id)}
         label="editListItem"
+        id={"editListItem_" + listItem.id}
         size="sm"
       />
       <IconButton
@@ -50,6 +51,7 @@ export const ListItem: React.FC<Props> = ({
         type="button"
         onClick={() => deleteListItem(listItem.id)}
         label="deleteListItem"
+        id={"deleteListItem_" + listItem.id}
         size="sm"
       />
     </ListItemWrapper>

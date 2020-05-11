@@ -65,6 +65,7 @@ export class ListItemEdit extends React.Component<Props, State> {
           onClick={() => this.props.handleEdit(-1)}
           label="cancelEditing"
           name="cancelEditing"
+          id={"cancelEditing_" + this.props.listItem.id}
           size="sm"
         />
       </FormWrapper>

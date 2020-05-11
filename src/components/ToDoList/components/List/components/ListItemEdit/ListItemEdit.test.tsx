@@ -47,7 +47,7 @@ describe("Component ListItemEdit", () => {
         saveListItem={click}
       />
     );
-    wrapper.find("button[name='cancelEditing']").simulate("click");
+    wrapper.find("div[id='cancelEditing_1']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 });
