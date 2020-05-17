@@ -1,5 +1,5 @@
 import React from "react";
 import { render } from "react-dom";
-import { ToDoList } from "./components";
+import { App } from "@/App";
 
-render(<ToDoList />, document.getElementById("root"));
+render(<App />, document.getElementById("root"));
