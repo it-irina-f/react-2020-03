@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Error404Screen renders page Error 404 1`] = `
+.emotion-0 {
+  margin: 40px auto;
+  text-align: center;
+  padding: 10px;
+  font-size: 200%;
+}
+
+<div
+  className="emotion-0"
+>
+  <h1>
+    404
+  </h1>
+  <p>
+    Page not found
+  </p>
+</div>
+`;

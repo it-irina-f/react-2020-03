@@ -26,6 +26,8 @@ const HeaderLogin = styled.span`
   padding: 0 10px;
 `;
 
+Button.displayName = "Button";
+
 interface RouteParams {
   name: string;
 }
@@ -46,7 +48,12 @@ class RawUserScreen extends React.PureComponent<
             <IconUser />
             <HeaderLogin>{this.props.match.params.name}</HeaderLogin>
           </HeaderLoginWrap>
-          <Button intent="primary" size="sm" onClick={this.logout}>
+          <Button
+            type="submit"
+            intent="primary"
+            size="sm"
+            onClick={this.logout}
+          >
             Выход
           </Button>
         </Header>

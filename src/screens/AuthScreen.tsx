@@ -18,6 +18,9 @@ const Form = styled.form`
     rgba(52, 58, 64, 0.12) 0px 6px 15px -2px;
 `;
 
+Input.displayName = "Input";
+Form.displayName = "Form";
+
 export const AuthScreen: React.FC<{}> = () => {
   const [name, setName] = useState("");
   const history = useHistory();
