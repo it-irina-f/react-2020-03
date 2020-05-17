@@ -9,7 +9,7 @@ export const AuthScreen: React.FC<{}> = () => {
     async (ev) => {
       ev.preventDefault();
       await login(name);
-      history.push(`/user/${name}`);
+      history.push(`/todo/${name}`);
     },
     [name]
   );
