@@ -2,6 +2,7 @@ import React from "react";
 import type { ListItemProps, TypeIdNumber } from "types/todo";
 import { List } from "./components/List";
 import { AddForm } from "./components/AddForm";
+import { Filter } from "./components/Filter";
 import styled from "@emotion/styled";
 import { reactLocalStorage } from "reactjs-localstorage";
 
@@ -13,11 +14,12 @@ interface ToDoListState {
   list: ListItemProps[];
   isLoading: boolean;
   editId: number;
+  filter: string;
 }
 
 const ToDoListWrapper = styled.div`
   display: block;
-  width: 500px;
+  width: 800px;
   margin: 10px auto;
   padding: 20px 50px;
 `;
@@ -30,6 +32,11 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 
+const ManageWrapper = styled.div`
+  display: flex;
+  margin: 10px 0;
+`;
+
 export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   constructor(props: ToDoListProps) {
     super(props);
@@ -37,6 +44,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       list: [],
       isLoading: true,
       editId: -1,
+      filter: "all",
     };
   }
 
@@ -122,10 +130,19 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.editHandler(-1);
   };
 
+  filterListHandler = (mode: string) => {
+    this.setState({
+      filter: mode,
+    });
+  };
+
   render() {
     return (
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
+        <ManageWrapper>
+          <Filter filterList={this.filterListHandler} />
+        </ManageWrapper>
         {this.state.isLoading ? (
           <h1>Загрузка данных...</h1>
         ) : (
@@ -136,6 +153,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
             deleteListItem={this.deleteItemHandler}
             handleEdit={this.editHandler}
             saveListItem={this.saveItemHandler}
+            filter={this.state.filter}
           />
         )}
         <AddForm addListItem={this.addListItemHandler} />

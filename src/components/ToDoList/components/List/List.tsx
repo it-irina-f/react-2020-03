@@ -4,7 +4,6 @@ import type {
   ListItemProps,
   TypeIdNumber,
   TypeSaveListItem,
-  TypeCancelEditing,
 } from "types/todo";
 
 import { ListItem, ListItemEdit } from "./components";
@@ -25,10 +24,12 @@ interface Props {
   handleEdit: TypeIdNumber;
   saveListItem: TypeSaveListItem;
   editId: number;
+  filter: string;
 }
 
 interface State {
   list: ListItemProps[];
+  filter: string;
 }
 
 export class List extends React.Component<Props, State> {
@@ -36,47 +37,11 @@ export class List extends React.Component<Props, State> {
     super(props);
     this.state = {
       list: this.props.list,
+      filter: this.props.filter,
     };
   }
 
-  componentDidMount(): void {
-    const newList = this.sortList(this.state.list);
-    this.setState({
-      list: newList,
-    });
-  }
-
-  componentDidUpdate(): void {
-    const propsList = this.props.list;
-    const stateList = this.state.list;
-
-    function isAnyChange() {
-      if (propsList.length !== stateList.length) {
-        return true;
-      } else {
-        const isNoChange = propsList.every((propsRow) => {
-          return stateList.find((stateRow) => {
-            return (
-              stateRow.id === propsRow.id &&
-              stateRow.isComplete === propsRow.isComplete &&
-              stateRow.text === propsRow.text
-            );
-          });
-        });
-        return !isNoChange;
-      }
-    }
-
-    if (isAnyChange()) {
-      const newList = this.sortList(this.props.list);
-
-      this.setState({
-        list: newList,
-      });
-    }
-  }
-
-  sortList(initList: ListItemProps[]) {
+  sortList(initList: ListItemProps[], filter: string) {
     const listComplete = initList.filter((row) => {
       return row.isComplete === true;
     });
@@ -85,12 +50,22 @@ export class List extends React.Component<Props, State> {
       return row.isComplete === false;
     });
 
-    return listNoComplete.concat(listComplete);
+    switch (filter) {
+      case "active":
+        return listNoComplete;
+        break;
+      case "done":
+        return listComplete;
+        break;
+      default:
+        return listNoComplete.concat(listComplete);
+    }
   }
 
   render() {
+    const sortList = this.sortList(this.props.list, this.props.filter);
     const editId = this.props.editId;
-    const itemList = this.state.list.map((row) =>
+    const itemList = sortList.map((row) =>
       row.id === editId ? (
         <ListItemEdit
           key={row.id}
