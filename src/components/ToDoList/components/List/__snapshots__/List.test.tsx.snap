@@ -1,14 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component List render list where 1 editing item 1`] = `
+.emotion-20 {
+  padding: 20px;
+  margin-bottom: 35px;
+  border-radius: 12px;
+  box-shadow: rgba(52,58,64,0.15) 0px 1px 10px 0px, rgba(52,58,64,0.1) 0px 6px 12px 0px, rgba(52,58,64,0.12) 0px 6px 15px -2px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+}
+
+.emotion-0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0 0.8rem;
+  height: 30px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: white;
+  color: #212529;
+  background: linear-gradient(to top,#f1f3f5,white);
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.1);
+  padding: 0;
+  width: 30px;
+}
+
+.emotion-1:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-1:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-1[aria-expanded="true"] {
+  background: none;
+  background-color: #f1f3f5;
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.3),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.15);
+}
+
+.emotion-12 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border: none;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.2) inset;
+  border-radius: 0.25rem;
+  -webkit-transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  height: 30px;
+}
+
+.emotion-12::-webkit-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-12::-moz-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-12:-ms-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-12::placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-12:focus {
+  box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
+  outline: none;
+}
+
+.emotion-12:disabled {
+  opacity: 0.8;
+  background: #f1f3f5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
+}
+
+.emotion-12:active {
+  background: #f1f3f5;
+}
+
 <div
-  className="css-1cjbtm3"
+  className="emotion-20"
 >
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={false}
@@ -19,7 +158,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       Сделать ДЗ
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -78,7 +217,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -150,10 +289,10 @@ exports[`Component List render list where 1 editing item 1`] = `
     </div>
   </div>
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={false}
@@ -164,7 +303,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       Приготовить ужин
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -223,7 +362,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -295,10 +434,10 @@ exports[`Component List render list where 1 editing item 1`] = `
     </div>
   </div>
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={false}
@@ -309,7 +448,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       Уборка квартиры
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_4"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -368,7 +507,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_4"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -440,11 +579,11 @@ exports[`Component List render list where 1 editing item 1`] = `
     </div>
   </div>
   <form
-    className="css-16suo3h"
+    className="emotion-3"
     onSubmit={[Function]}
   >
     <input
-      className="Input css-i909sp"
+      className="Input emotion-12"
       name="text_0"
       onChange={[Function]}
       onTouchEnd={[Function]}
@@ -454,7 +593,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       value="Полить цветы"
     />
     <button
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       name="saveEditing"
       onKeyDown={[Function]}
       onKeyUp={[Function]}
@@ -515,9 +654,8 @@ exports[`Component List render list where 1 editing item 1`] = `
       </svg>
     </button>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="cancelEditing_0"
-      name="cancelEditing"
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
@@ -582,10 +720,10 @@ exports[`Component List render list where 1 editing item 1`] = `
     </div>
   </form>
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={true}
@@ -596,7 +734,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       Купить продукты
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -655,7 +793,7 @@ exports[`Component List render list where 1 editing item 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -730,22 +868,112 @@ exports[`Component List render list where 1 editing item 1`] = `
 `;
 
 exports[`Component List renders empty list 1`] = `
+.emotion-0 {
+  padding: 20px;
+  margin-bottom: 35px;
+  border-radius: 12px;
+  box-shadow: rgba(52,58,64,0.15) 0px 1px 10px 0px, rgba(52,58,64,0.1) 0px 6px 12px 0px, rgba(52,58,64,0.12) 0px 6px 15px -2px;
+}
+
 <div
-  className="css-1cjbtm3"
+  className="emotion-0"
 >
   Список пустой
 </div>
 `;
 
 exports[`Component List renders list 1`] = `
+.emotion-20 {
+  padding: 20px;
+  margin-bottom: 35px;
+  border-radius: 12px;
+  box-shadow: rgba(52,58,64,0.15) 0px 1px 10px 0px, rgba(52,58,64,0.1) 0px 6px 12px 0px, rgba(52,58,64,0.12) 0px 6px 15px -2px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+}
+
+.emotion-0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0 0.8rem;
+  height: 30px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: white;
+  color: #212529;
+  background: linear-gradient(to top,#f1f3f5,white);
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.1);
+  padding: 0;
+  width: 30px;
+}
+
+.emotion-1:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-1:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-1[aria-expanded="true"] {
+  background: none;
+  background-color: #f1f3f5;
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.3),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.15);
+}
+
 <div
-  className="css-1cjbtm3"
+  className="emotion-20"
 >
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={false}
@@ -756,7 +984,7 @@ exports[`Component List renders list 1`] = `
       Сделать ДЗ
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -815,7 +1043,7 @@ exports[`Component List renders list 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -887,10 +1115,10 @@ exports[`Component List renders list 1`] = `
     </div>
   </div>
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={false}
@@ -901,7 +1129,7 @@ exports[`Component List renders list 1`] = `
       Приготовить ужин
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -960,7 +1188,7 @@ exports[`Component List renders list 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1032,10 +1260,10 @@ exports[`Component List renders list 1`] = `
     </div>
   </div>
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={false}
@@ -1046,7 +1274,7 @@ exports[`Component List renders list 1`] = `
       Уборка квартиры
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_4"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1105,7 +1333,7 @@ exports[`Component List renders list 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_4"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1177,10 +1405,10 @@ exports[`Component List renders list 1`] = `
     </div>
   </div>
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={true}
@@ -1191,7 +1419,7 @@ exports[`Component List renders list 1`] = `
       Полить цветы
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1250,7 +1478,7 @@ exports[`Component List renders list 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1322,10 +1550,10 @@ exports[`Component List renders list 1`] = `
     </div>
   </div>
   <div
-    className="css-16suo3h"
+    className="emotion-3"
   >
     <label
-      className="css-w6gvpm"
+      className="emotion-0"
     >
       <input
         checked={true}
@@ -1336,7 +1564,7 @@ exports[`Component List renders list 1`] = `
       Купить продукты
     </label>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="editListItem_2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1395,7 +1623,7 @@ exports[`Component List renders list 1`] = `
       </svg>
     </div>
     <div
-      className="Button Touchable css-gqylg5"
+      className="Button Touchable emotion-1"
       id="deleteListItem_2"
       onClick={[Function]}
       onKeyDown={[Function]}
