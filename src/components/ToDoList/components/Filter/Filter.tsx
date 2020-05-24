@@ -3,7 +3,7 @@ import { Button, Input } from "sancho";
 import type { TypeAddForm, TypeFilterMode } from "types/todo";
 
 interface FilterProps {
-  filterList: TypeAddForm;
+  changeFilter: TypeAddForm;
 }
 
 interface FilterState {
@@ -16,15 +16,13 @@ const modeFilter = [
   { id: "done", title: "Завершенные", isActive: false },
 ];
 
-Button.displayName = "Button";
-
 export class Filter extends React.Component<FilterProps, FilterState> {
   state = {
     mode: modeFilter,
   };
 
   clickHandler = (id: string) => {
-    this.props.filterList(id);
+    this.props.changeFilter(id);
     const updBtns = this.state.mode.map((row) => {
       if (row.id === id) {
         return { ...row, isActive: true };

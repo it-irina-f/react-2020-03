@@ -130,7 +130,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.editHandler(-1);
   };
 
-  filterListHandler = (mode: string) => {
+  changeFilterHandler = (mode: string) => {
     this.setState({
       filter: mode,
     });
@@ -141,7 +141,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
         <ManageWrapper>
-          <Filter filterList={this.filterListHandler} />
+          <Filter changeFilter={this.changeFilterHandler} />
         </ManageWrapper>
         {this.state.isLoading ? (
           <h1>Загрузка данных...</h1>

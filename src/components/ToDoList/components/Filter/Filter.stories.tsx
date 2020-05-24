@@ -8,5 +8,5 @@ export default {
 };
 
 export const FilterComponent = () => [
-  <Filter key="jsx" filterList={action("filter list")} />,
+  <Filter key="jsx" changeFilter={action("filter list")} />,
 ];
