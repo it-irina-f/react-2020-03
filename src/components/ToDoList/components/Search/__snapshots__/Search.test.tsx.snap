@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Component Search renders Search 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border: none;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.2) inset;
+  border-radius: 0.25rem;
+  -webkit-transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  height: 40px;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0::-moz-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0::placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
+  outline: none;
+}
+
+.emotion-0:disabled {
+  opacity: 0.8;
+  background: #f1f3f5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
+}
+
+.emotion-0:active {
+  background: #f1f3f5;
+}
+
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0 1rem;
+  height: 40px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid;
+  background: none;
+  color: #1971c2;
+  border-color: hsla(208.79999999999995,77.2%,42.9%,0.2);
+  box-shadow: none;
+  -webkit-transition: box-shadow 0.07s cubic-bezier(0.35,0,0.25,1),background 0.07s cubic-bezier(0.35,0,0.25,1);
+  transition: box-shadow 0.07s cubic-bezier(0.35,0,0.25,1),background 0.07s cubic-bezier(0.35,0,0.25,1);
+  padding: 0;
+  width: 40px;
+}
+
+.emotion-1:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-1:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-1[aria-expanded="true"] {
+  background: hsla(208.79999999999995,77.2%,42.9%,0.15);
+}
+
+<form
+  className="emotion-2"
+  onSubmit={[Function]}
+>
+  <input
+    className="Input emotion-0"
+    name="searchItems"
+    onChange={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    placeholder="Введите текст для поиска..."
+    type="search"
+    value=""
+  />
+  <button
+    className="Button Touchable emotion-1"
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+    type="submit"
+  >
+    <div
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": "1px",
+        }
+      }
+    >
+      search
+    </div>
+    <svg
+      aria-hidden={true}
+      fill="none"
+      height="20px"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="20px"
+    >
+      <circle
+        cx="11"
+        cy="11"
+        r="8"
+      />
+      <line
+        x1="21"
+        x2="16.65"
+        y1="21"
+        y2="16.65"
+      />
+    </svg>
+  </button>
+</form>
+`;
