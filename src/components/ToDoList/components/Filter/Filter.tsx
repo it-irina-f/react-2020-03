@@ -37,7 +37,7 @@ export class Filter extends React.Component<FilterProps, FilterState> {
 
   render() {
     return (
-      <>
+      <div>
         {this.state.mode.map((row) =>
           row.isActive === true ? (
             <Button key={"btn_" + row.id} intent="primary">
@@ -52,7 +52,7 @@ export class Filter extends React.Component<FilterProps, FilterState> {
             </Button>
           )
         )}
-      </>
+      </div>
     );
   }
 }

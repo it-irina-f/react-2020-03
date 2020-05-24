@@ -3,6 +3,7 @@ import type { ListItemProps, TypeIdNumber } from "types/todo";
 import { List } from "./components/List";
 import { AddForm } from "./components/AddForm";
 import { Filter } from "./components/Filter";
+import { Search } from "./components/Search";
 import styled from "@emotion/styled";
 import { reactLocalStorage } from "reactjs-localstorage";
 
@@ -15,6 +16,7 @@ interface ToDoListState {
   isLoading: boolean;
   editId: number;
   filter: string;
+  queryResult: ListItemProps[];
 }
 
 const ToDoListWrapper = styled.div`
@@ -34,7 +36,8 @@ const TitleWrapper = styled.div`
 
 const ManageWrapper = styled.div`
   display: flex;
-  margin: 10px 0;
+  justify-content: space-between;
+  margin: 20px 0;
 `;
 
 export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
@@ -45,6 +48,7 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       isLoading: true,
       editId: -1,
       filter: "all",
+      queryResult: [],
     };
   }
 
@@ -136,18 +140,33 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     });
   };
 
+  searchItemHandler = (text: string) => {
+    const queryResult = this.state.list.filter((row) => {
+      return row.text.toLowerCase().indexOf(text.toLowerCase()) != -1;
+    });
+
+    this.setState({
+      queryResult: queryResult,
+    });
+  };
+
   render() {
     return (
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
         <ManageWrapper>
+          <Search searchItem={this.searchItemHandler} />
           <Filter changeFilter={this.changeFilterHandler} />
         </ManageWrapper>
         {this.state.isLoading ? (
           <h1>Загрузка данных...</h1>
         ) : (
           <List
-            list={this.state.list}
+            list={
+              this.state.queryResult.length === 0
+                ? this.state.list
+                : this.state.queryResult
+            }
             editId={this.state.editId}
             toggleComplete={this.toggleCompleteHandler}
             deleteListItem={this.deleteItemHandler}

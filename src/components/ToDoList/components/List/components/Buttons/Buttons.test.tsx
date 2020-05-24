@@ -5,7 +5,6 @@ import renderer from "react-test-renderer";
 import { ManageButton } from "./Buttons";
 import { IconEdit, IconSave, IconTrash2, IconX } from "sancho";
 
-
 const click = jest.fn();
 
 describe("Component ManageButton", () => {

@@ -1,10 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import type {
-  ListItemProps,
-  TypeIdNumber,
-  TypeSaveListItem,
-} from "types/todo";
+import type { ListItemProps, TypeIdNumber, TypeSaveListItem } from "types/todo";
 
 import { ListItem, ListItemEdit } from "./components";
 
@@ -85,7 +81,7 @@ export class List extends React.Component<Props, State> {
     );
     return (
       <ListWrapper>
-        {this.state.list.length === 0 ? "Список пустой" : itemList}
+        {sortList.length === 0 ? "Список пустой" : itemList}
       </ListWrapper>
     );
   }
