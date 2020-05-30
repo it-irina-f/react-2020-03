@@ -18,7 +18,7 @@ describe("Component ListItem", () => {
             listItem={listItem1}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
+            handleEdit={click}
           />
         )
         .toJSON()
@@ -33,7 +33,7 @@ describe("Component ListItem", () => {
             listItem={listItem2}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
+            handleEdit={click}
           />
         )
         .toJSON()
@@ -46,7 +46,7 @@ describe("Component ListItem", () => {
         listItem={listItem1}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
+        handleEdit={click}
       />
     );
     wrapper.find("input").simulate("change");
@@ -58,7 +58,7 @@ describe("Component ListItem", () => {
         listItem={listItem2}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
+        handleEdit={click}
       />
     );
     wrapper.find("input").simulate("change");
@@ -71,10 +71,10 @@ describe("Component ListItem", () => {
         listItem={listItem2}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
+        handleEdit={click}
       />
     );
-    wrapper.find("button[name='deleteListItem']").simulate("click");
+    wrapper.find("div[id='deleteListItem_1']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 
@@ -84,10 +84,10 @@ describe("Component ListItem", () => {
         listItem={listItem2}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
+        handleEdit={click}
       />
     );
-    wrapper.find("button[name='editListItem']").simulate("click");
+    wrapper.find("div[id='editListItem_1']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 });

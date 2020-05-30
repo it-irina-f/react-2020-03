@@ -23,8 +23,7 @@ describe("Component List", () => {
             list={list}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
             editId={-1}
           />
@@ -40,8 +39,7 @@ describe("Component List", () => {
             list={list}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
             editId={0}
           />
@@ -57,8 +55,7 @@ describe("Component List", () => {
             list={[]}
             toggleComplete={click}
             deleteListItem={click}
-            editListItem={click}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
             editId={-1}
           />
@@ -73,8 +70,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -89,16 +85,15 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
     );
     wrapper
       .find("div")
-      .at(3)
-      .find("button[name='deleteListItem']")
+      .at(1)
+      .find("div[id='deleteListItem_1']")
       .simulate("click");
     expect(click).toHaveBeenCalled();
   });
@@ -109,8 +104,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -125,13 +119,12 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
     );
-    const checkbox = wrapper.find("div").at(5).find("input");
+    const checkbox = wrapper.find("input[name='checkbox_0']");
     expect(checkbox.prop("checked")).toBe(true);
   });
 
@@ -141,8 +134,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
@@ -158,15 +150,14 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
     );
-    expect(wrapper.find("div").at(5).find("label").text()).toEqual(
-      "Купить продукты"
-    );
+    expect(
+      wrapper.find("input[name='checkbox_2']").closest("label").text()
+    ).toEqual("Купить продукты");
   });
 
   it("find manage-buttons", () => {
@@ -175,14 +166,12 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
     );
-    expect(wrapper.find("button[name='deleteListItem']")).toHaveLength(5);
-    expect(wrapper.find("button[name='editListItem']")).toHaveLength(5);
+    expect(wrapper.find("div[role='button']")).toHaveLength(10);
   });
 
   it("simulate click Edit List Item", () => {
@@ -191,16 +180,16 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />
     );
     wrapper
       .find("div")
-      .at(3)
-      .find("button[name='editListItem']")
+      .at(1)
+      .find("div[id='editListItem_1']")
+
       .simulate("click");
     expect(click).toHaveBeenCalled();
   });
@@ -211,15 +200,14 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={1}
       />
     );
     expect(wrapper.find("form")).toHaveLength(1);
     expect(wrapper.find("button[name='saveEditing']")).toHaveLength(1);
-    expect(wrapper.find("button[name='cancelEditing']")).toHaveLength(1);
+    expect(wrapper.find("div[id='cancelEditing_1']")).toHaveLength(1);
   });
 
   it("simulate click Save List Item", () => {
@@ -228,8 +216,7 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={1}
       />
@@ -244,13 +231,12 @@ describe("Component List", () => {
         list={list}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={1}
       />
     );
-    wrapper.find("button[name='cancelEditing']").simulate("click");
+    wrapper.find("div[id='cancelEditing_1']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 
@@ -260,8 +246,7 @@ describe("Component List", () => {
         list={[]}
         toggleComplete={click}
         deleteListItem={click}
-        editListItem={click}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
         editId={-1}
       />

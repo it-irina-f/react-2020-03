@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthScreen Test renders form for authorization 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 460px;
+  height: 160px;
+  padding: 20px;
+  margin: 50px auto 20px;
+  border-radius: 12px;
+  box-shadow: rgba(52,58,64,0.15) 0px 1px 10px 0px, rgba(52,58,64,0.1) 0px 6px 12px 0px, rgba(52,58,64,0.12) 0px 6px 15px -2px;
+}
+
+.emotion-3 {
+  margin-top: 1rem;
+}
+
+.emotion-3:first-child {
+  margin-top: 0;
+}
+
+.emotion-1 {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5F6871;
+  line-height: 1.5;
+}
+
+.emotion-2 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border: none;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.2) inset;
+  border-radius: 0.25rem;
+  -webkit-transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  font-size: 1.25rem;
+  padding: 0.65rem 1rem;
+  height: 48px;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-2::-moz-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-2::placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-2:focus {
+  box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
+  outline: none;
+}
+
+.emotion-2:disabled {
+  opacity: 0.8;
+  background: #f1f3f5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
+}
+
+.emotion-2:active {
+  background: #f1f3f5;
+}
+
+.emotion-5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  width: 100%;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #1971c2;
+  color: white;
+  background-image: linear-gradient(to top,#1971c2,hsl(208.79999999999995,77.2%,60.1%));
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.2);
+}
+
+.emotion-5:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-5:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-5[aria-expanded="true"] {
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.5),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.5);
+  background-image: linear-gradient(to top,#1864ab,#1971c2);
+}
+
+.emotion-4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+<form
+  className="emotion-6"
+  onSubmit={[Function]}
+>
+  <div
+    className="InputGroup emotion-3"
+  >
+    <label
+      className="Label emotion-1"
+      htmlFor=""
+    >
+      <div
+        className="Label__text emotion-0"
+      >
+        Логин
+      </div>
+    </label>
+    <input
+      className="Input emotion-2"
+      id=""
+      onChange={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      placeholder="Введите имя"
+      type="text"
+      value=""
+    />
+  </div>
+  <button
+    className="Button Touchable emotion-5"
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseDownCapture={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchMoveCapture={[Function]}
+    onTouchStart={[Function]}
+    onTouchStartCapture={[Function]}
+    role="button"
+    tabIndex={0}
+    type="submit"
+  >
+    <span
+      aria-hidden={false}
+      className="emotion-4"
+    >
+      Вход
+    </span>
+  </button>
+</form>
+`;

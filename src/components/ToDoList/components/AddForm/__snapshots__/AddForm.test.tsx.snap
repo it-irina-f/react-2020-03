@@ -1,12 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test Component AddForm renders AddForm 1`] = `
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border: none;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.2) inset;
+  border-radius: 0.25rem;
+  -webkit-transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  transition: background 0.25s cubic-bezier(0.35,0,0.25,1),border-color 0.15s cubic-bezier(0.35,0,0.25,1),box-shadow 0.15s cubic-bezier(0.35,0,0.25,1);
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  height: 40px;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0::-moz-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0::placeholder {
+  color: hsla(210,10.8%,14.5%,0.45);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 3px hsla(209,75.4%,38.2%,0.1),inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.05);
+  outline: none;
+}
+
+.emotion-0:disabled {
+  opacity: 0.8;
+  background: #f1f3f5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 2px transparent inset,0 0 0 1px hsla(210,10.8%,14.5%,0.12) inset;
+}
+
+.emotion-0:active {
+  background: #f1f3f5;
+}
+
+.emotion-2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0 1rem;
+  height: 40px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #1971c2;
+  color: white;
+  background-image: linear-gradient(to top,#1971c2,hsl(208.79999999999995,77.2%,60.1%));
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.2);
+}
+
+.emotion-2:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-2:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-2[aria-expanded="true"] {
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.5),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.5);
+  background-image: linear-gradient(to top,#1864ab,#1971c2);
+}
+
+.emotion-1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 <form
-  className="css-ov1ktg"
+  className="emotion-3"
   onSubmit={[Function]}
 >
   <input
-    className="Input css-1q13pxr"
+    className="Input emotion-0"
     name="addlistItem"
     onChange={[Function]}
     onTouchEnd={[Function]}
@@ -16,7 +143,7 @@ exports[`Test Component AddForm renders AddForm 1`] = `
     value=""
   />
   <button
-    className="Button Touchable css-1q0hrqc"
+    className="Button Touchable emotion-2"
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
@@ -34,7 +161,7 @@ exports[`Test Component AddForm renders AddForm 1`] = `
   >
     <span
       aria-hidden={false}
-      className="css-1kd7cij"
+      className="emotion-1"
     >
       Добавить
     </span>

@@ -14,4 +14,8 @@ export type TypeAddForm = (text: string) => void;
 
 export type TypeSaveListItem = (id: number, text: string) => void;
 
-export type TypeCancelEditing = () => void;
+export interface TypeFilterMode {
+  id: string;
+  title: string;
+  isActive: boolean;
+}

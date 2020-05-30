@@ -1,11 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ListItem renders list item where isComplete=false 1`] = `
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+}
+
+.emotion-0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0 0.8rem;
+  height: 30px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: white;
+  color: #212529;
+  background: linear-gradient(to top,#f1f3f5,white);
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.1);
+  padding: 0;
+  width: 30px;
+}
+
+.emotion-1:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-1:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-1[aria-expanded="true"] {
+  background: none;
+  background-color: #f1f3f5;
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.3),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.15);
+}
+
 <div
-  className="css-16suo3h"
+  className="emotion-3"
 >
   <label
-    className="css-w6gvpm"
+    className="emotion-0"
   >
     <input
       checked={false}
@@ -16,7 +92,8 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
     Сделать ДЗ
   </label>
   <div
-    className="Button Touchable css-gqylg5"
+    className="Button Touchable emotion-1"
+    id="editListItem_1"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -74,7 +151,8 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
     </svg>
   </div>
   <div
-    className="Button Touchable css-gqylg5"
+    className="Button Touchable emotion-1"
+    id="deleteListItem_1"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -147,11 +225,87 @@ exports[`Component ListItem renders list item where isComplete=false 1`] = `
 `;
 
 exports[`Component ListItem renders list item where isComplete=true 1`] = `
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+}
+
+.emotion-0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 500;
+  position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0 0.8rem;
+  height: 30px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: white;
+  color: #212529;
+  background: linear-gradient(to top,#f1f3f5,white);
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.2),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.1);
+  padding: 0;
+  width: 30px;
+}
+
+.emotion-1:focus {
+  outline: 3px auto hsla(208.79999999999995,77.2%,42.9%,0.8);
+}
+
+.emotion-1:focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
+.emotion-1[aria-expanded="true"] {
+  background: none;
+  background-color: #f1f3f5;
+  box-shadow: inset 0 0 0 1px hsla(210,10.8%,14.5%,0.3),inset 0 -1px 1px 0 hsla(210,10.8%,14.5%,0.15);
+}
+
 <div
-  className="css-16suo3h"
+  className="emotion-3"
 >
   <label
-    className="css-w6gvpm"
+    className="emotion-0"
   >
     <input
       checked={true}
@@ -162,7 +316,8 @@ exports[`Component ListItem renders list item where isComplete=true 1`] = `
     Полить цветы
   </label>
   <div
-    className="Button Touchable css-gqylg5"
+    className="Button Touchable emotion-1"
+    id="editListItem_0"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -220,7 +375,8 @@ exports[`Component ListItem renders list item where isComplete=true 1`] = `
     </svg>
   </div>
   <div
-    className="Button Touchable css-gqylg5"
+    className="Button Touchable emotion-1"
+    id="deleteListItem_0"
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
