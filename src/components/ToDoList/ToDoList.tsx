@@ -1,7 +1,9 @@
 import React from "react";
-import type { ListItemProps } from "types/todo";
+import type { ListItemProps, TypeIdNumber } from "types/todo";
 import { List } from "./components/List";
 import { AddForm } from "./components/AddForm";
+import { Filter } from "./components/Filter";
+import { Search } from "./components/Search";
 import styled from "@emotion/styled";
 import { reactLocalStorage } from "reactjs-localstorage";
 
@@ -13,11 +15,13 @@ interface ToDoListState {
   list: ListItemProps[];
   isLoading: boolean;
   editId: number;
+  filter: string;
+  queryResult: ListItemProps[];
 }
 
 const ToDoListWrapper = styled.div`
   display: block;
-  width: 500px;
+  width: 800px;
   margin: 10px auto;
   padding: 20px 50px;
 `;
@@ -30,6 +34,12 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 
+const ManageWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+`;
+
 export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   constructor(props: ToDoListProps) {
     super(props);
@@ -37,6 +47,8 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       list: [],
       isLoading: true,
       editId: -1,
+      filter: "all",
+      queryResult: [],
     };
   }
 
@@ -103,23 +115,13 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     this.updateList(updList);
   };
 
-  editItemHandler = (id: number) => {
+  editHandler = (id: number) => {
     this.setState({
       editId: id,
     });
   };
 
-  cancelEditingHandler = () => {
-    this.setState({
-      editId: -1,
-    });
-  };
-
   saveItemHandler = (id: number, text: string) => {
-    this.setState({
-      editId: -1,
-    });
-
     const updList = this.state.list.map((row) => {
       if (row.id === id) {
         return { ...row, text };
@@ -128,23 +130,49 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
     });
 
     this.updateList(updList);
+
+    this.editHandler(-1);
+  };
+
+  changeFilterHandler = (mode: string) => {
+    this.setState({
+      filter: mode,
+    });
+  };
+
+  searchItemHandler = (text: string) => {
+    const queryResult = this.state.list.filter((row) => {
+      return row.text.toLowerCase().indexOf(text.toLowerCase()) != -1;
+    });
+
+    this.setState({
+      queryResult: queryResult,
+    });
   };
 
   render() {
     return (
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
+        <ManageWrapper>
+          <Search searchItem={this.searchItemHandler} />
+          <Filter changeFilter={this.changeFilterHandler} />
+        </ManageWrapper>
         {this.state.isLoading ? (
           <h1>Загрузка данных...</h1>
         ) : (
           <List
-            list={this.state.list}
+            list={
+              this.state.queryResult.length === 0
+                ? this.state.list
+                : this.state.queryResult
+            }
             editId={this.state.editId}
             toggleComplete={this.toggleCompleteHandler}
             deleteListItem={this.deleteItemHandler}
-            editListItem={this.editItemHandler}
-            cancelEditing={this.cancelEditingHandler}
+            handleEdit={this.editHandler}
             saveListItem={this.saveItemHandler}
+            filter={this.state.filter}
           />
         )}
         <AddForm addListItem={this.addListItemHandler} />

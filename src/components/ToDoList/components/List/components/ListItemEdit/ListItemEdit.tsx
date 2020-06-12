@@ -1,20 +1,16 @@
 import React from "react";
-import { IconSave, IconX, IconButton, Input } from "sancho";
+import { IconSave, IconX, Input } from "sancho";
+import { ManageButton } from "@/components/ToDoList/components/List/components/Buttons";
 import styled from "@emotion/styled";
-import type {
-  ListItemProps,
-  TypeIdNumber,
-  TypeSaveListItem,
-  TypeCancelEditing,
-} from "types/todo";
+import type { ListItemProps, TypeIdNumber, TypeSaveListItem } from "types/todo";
 
-interface Props {
+interface ListItemEditProps {
   listItem: ListItemProps;
   saveListItem: TypeSaveListItem;
-  cancelEditing: TypeCancelEditing;
+  handleEdit: TypeIdNumber;
 }
 
-interface State {
+interface ListItemEditState {
   textInput: string;
 }
 
@@ -25,7 +21,10 @@ const FormWrapper = styled.form`
   padding: 0 0 10px;
 `;
 
-export class ListItemEdit extends React.Component<Props, State> {
+export class ListItemEdit extends React.Component<
+  ListItemEditProps,
+  ListItemEditState
+> {
   state = {
     textInput: this.props.listItem.text,
   };
@@ -42,6 +41,7 @@ export class ListItemEdit extends React.Component<Props, State> {
   };
 
   render() {
+    const isSubmit = true;
     return (
       <FormWrapper onSubmit={this.submitHandler}>
         <Input
@@ -52,20 +52,17 @@ export class ListItemEdit extends React.Component<Props, State> {
           value={this.state.textInput}
           onChange={this.inputChangeHandle}
         />
-        <IconButton
+        <ManageButton
           icon={<IconSave />}
-          type="submit"
           name="saveEditing"
           label="saveEditing"
-          size="sm"
+          isSubmit={isSubmit}
         />
-        <IconButton
+        <ManageButton
           icon={<IconX />}
-          type="button"
-          onClick={() => this.props.cancelEditing()}
+          onClick={() => this.props.handleEdit(-1)}
           label="cancelEditing"
-          name="cancelEditing"
-          size="sm"
+          id={"cancelEditing_" + this.props.listItem.id}
         />
       </FormWrapper>
     );

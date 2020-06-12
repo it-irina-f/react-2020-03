@@ -1,13 +1,14 @@
 import React from "react";
 import { IconEdit, IconTrash2, IconButton } from "sancho";
 import styled from "@emotion/styled";
+import { ManageButton } from "@/components/ToDoList/components/List/components/Buttons";
 import type { ListItemProps, TypeIdNumber } from "types/todo";
 
 interface Props {
   listItem: ListItemProps;
   toggleComplete: TypeIdNumber;
   deleteListItem: TypeIdNumber;
-  editListItem: TypeIdNumber;
+  handleEdit: TypeIdNumber;
 }
 
 const ListItemWrapper = styled.div`
@@ -25,7 +26,7 @@ export const ListItem: React.FC<Props> = ({
   listItem,
   toggleComplete,
   deleteListItem,
-  editListItem,
+  handleEdit,
 }) => {
   return (
     <ListItemWrapper>
@@ -38,19 +39,17 @@ export const ListItem: React.FC<Props> = ({
         />
         {listItem.text}
       </LabelWrapper>
-      <IconButton
+      <ManageButton
         icon={<IconEdit />}
-        type="button"
-        onClick={() => editListItem(listItem.id)}
+        onClick={() => handleEdit(listItem.id)}
         label="editListItem"
-        size="sm"
+        id={"editListItem_" + listItem.id}
       />
-      <IconButton
+      <ManageButton
         icon={<IconTrash2 />}
-        type="button"
         onClick={() => deleteListItem(listItem.id)}
         label="deleteListItem"
-        size="sm"
+        id={"deleteListItem_" + listItem.id}
       />
     </ListItemWrapper>
   );

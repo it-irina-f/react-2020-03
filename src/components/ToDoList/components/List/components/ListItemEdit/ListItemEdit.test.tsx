@@ -16,7 +16,7 @@ describe("Component ListItemEdit", () => {
         .create(
           <ListItemEdit
             listItem={listItem1}
-            cancelEditing={click}
+            handleEdit={click}
             saveListItem={click}
           />
         )
@@ -28,7 +28,7 @@ describe("Component ListItemEdit", () => {
     const wrapper = mount(
       <ListItemEdit
         listItem={listItem2}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
       />
     );
@@ -43,11 +43,11 @@ describe("Component ListItemEdit", () => {
     const wrapper = mount(
       <ListItemEdit
         listItem={listItem2}
-        cancelEditing={click}
+        handleEdit={click}
         saveListItem={click}
       />
     );
-    wrapper.find("button[name='cancelEditing']").simulate("click");
+    wrapper.find("div[id='cancelEditing_1']").simulate("click");
     expect(click).toHaveBeenCalled();
   });
 });

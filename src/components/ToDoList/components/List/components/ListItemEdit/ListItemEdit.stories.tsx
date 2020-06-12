@@ -13,7 +13,7 @@ const listItem1 = { id: 0, text: "Полить цветы", isComplete: true };
 export const ListItemEditForm = () => [
   <ListItemEdit
     listItem={object("listItem", { ...listItem1 })}
-    cancelEditing={action("Click for cancel editing")}
+    handleEdit={action("Click for cancel editing")}
     saveListItem={action("Click for save editing")}
     key="jsx"
   ></ListItemEdit>,

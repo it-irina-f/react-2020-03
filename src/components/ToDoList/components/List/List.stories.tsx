@@ -24,8 +24,7 @@ export const componentList = () => [
     list={object("list", list)}
     toggleComplete={action("Item clicked")}
     deleteListItem={action("Click for delete item")}
-    editListItem={action("Click for edit item")}
-    cancelEditing={action("Click for cancel editing")}
+    handleEdit={action("Click for edit item")}
     saveListItem={action("Click for save editing")}
   />,
 ];
@@ -37,8 +36,7 @@ export const componentListEdit = () => [
     list={object("list", list)}
     toggleComplete={action("Item clicked")}
     deleteListItem={action("Click for delete item")}
-    editListItem={action("Click for edit item")}
-    cancelEditing={action("Click for cancel editing")}
+    handleEdit={action("Click for edit item")}
     saveListItem={action("Click for save editing")}
   />,
 ];
