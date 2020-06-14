@@ -4,12 +4,14 @@ export type State = {
   isLoading: boolean;
   data: any | undefined;
   error: Error | undefined;
+  probability: any | undefined;
 };
 
 const initialState: State = {
   isLoading: false,
   data: undefined,
   error: undefined,
+  probability: undefined,
 };
 
 export const reducer: Reducer<State> = (state = initialState, action) => {
@@ -29,6 +31,11 @@ export const reducer: Reducer<State> = (state = initialState, action) => {
         isLoading: false,
         data: undefined,
         error: action.payload.error,
+      };
+    case "ANALYTICS_CLICK":
+      return {
+        ...state,
+        probability: action.payload.probability,
       };
     default:
       return state;

@@ -7,3 +7,7 @@ export type Payload = {
   data?: any | undefined;
   error?: any | undefined;
 };
+
+export type PayloadProbability = {
+  probability: any | undefined;
+};

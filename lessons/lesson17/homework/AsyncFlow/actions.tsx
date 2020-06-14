@@ -1,7 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { LOADING, SUCCESS, ERROR } from "./const";
-import type { PayloadLoading, Payload } from "./types";
+import { LOADING, SUCCESS, ERROR, ANALYTICS_CLICK } from "./const";
+import type { PayloadLoading, Payload, PayloadProbability } from "./types";
 
 export const loadingAction = createAction<PayloadLoading>(LOADING);
 export const successAction = createAction<Payload>(SUCCESS);
@@ -20,3 +20,7 @@ export const getData = () => {
       });
   };
 };
+
+export const probabilityAction = createAction<PayloadProbability>(
+  ANALYTICS_CLICK
+);
