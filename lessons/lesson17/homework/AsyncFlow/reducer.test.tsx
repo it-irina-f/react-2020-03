@@ -1,36 +1,39 @@
 import { reducer } from "./reducer";
+import { loadingAction, successAction, errorAction } from "./actions";
 
 const defaultState = {
   isLoading: false,
   data: undefined,
   error: undefined,
+  probability: undefined,
 };
 
 describe("reducer test", () => {
   it("call reducer with action=LOADING", () => {
-    expect(reducer(defaultState, { type: "LOADING" })).toEqual({
+    const payload = { isLoading: true };
+    expect(reducer(defaultState, loadingAction(payload))).toEqual({
       isLoading: true,
       data: undefined,
       error: undefined,
+      probability: undefined,
     });
   });
   it("call reducer with action=ERROR", () => {
-    expect(
-      reducer(defaultState, {
-        type: "ERROR",
-        error: { message: "error" },
-      })
-    ).toEqual({
+    const payload = { error: "error" };
+    expect(reducer(defaultState, errorAction(payload))).toEqual({
       isLoading: false,
       data: undefined,
-      error: { message: "error" },
+      error: "error",
+      probability: undefined,
     });
   });
   it("call reducer with action=SUCCESS", () => {
-    expect(reducer(defaultState, { type: "SUCCESS", data: "data" })).toEqual({
+    const payload = { data: "data" };
+    expect(reducer(defaultState, successAction(payload))).toEqual({
       isLoading: false,
       data: "data",
       error: undefined,
+      probability: undefined,
     });
   });
   it("call reducer without action", () => {
