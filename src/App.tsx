@@ -7,21 +7,18 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import { ToDoListScreen } from "@/screens/ToDoListScreen";
-
-import { Auth } from "@/components";
-import { Error404 } from "@/components";
-
+import { Auth, Error404, ToDoScreen, User } from "@/components";
 import { store } from "@/AppStore";
 
 export const App: React.FC<{}> = () => (
   <Provider store={store}>
     <Router>
+      <User />
       <Switch>
         <Route path="/auth">
           <Auth />
         </Route>
-        <Route path="/todo" component={ToDoListScreen} />
+        <Route path="/todo" render={() => <ToDoScreen />} />
         <Redirect exact from="/" to="/auth" />
         <Route path="*">
           <Error404 />
