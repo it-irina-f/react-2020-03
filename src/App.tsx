@@ -7,7 +7,8 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import { Auth, Error404, ToDoScreen, User } from "@/components";
+import { Auth, User } from "@/modules";
+import { Error404, ToDoScreen } from "@/screens";
 import { store } from "@/AppStore";
 
 export const App: React.FC<{}> = () => (

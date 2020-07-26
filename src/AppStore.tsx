@@ -3,7 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import { fork } from "redux-saga/effects";
 
-import { authSlice, authSaga } from "components/Auth";
+import { authSlice, authSaga } from "@/modules/Auth";
 
 const sagaMiddleware = createSagaMiddleware();
 
