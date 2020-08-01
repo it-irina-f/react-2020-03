@@ -11,12 +11,14 @@ export const initialState: { username: string; status?: CheckState } = {
   status: CheckState.initiated,
 };
 
+export const usernameMinLength = 3;
+
 export const authSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
     login: (state, { payload }: PayloadAction<string>) => {
-      if (payload.length > 3) {
+      if (payload.length > usernameMinLength) {
         return { status: CheckState.succeed, username: payload };
       }
       return state;
