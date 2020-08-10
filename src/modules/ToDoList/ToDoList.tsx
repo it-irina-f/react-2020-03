@@ -1,9 +1,9 @@
 import React from "react";
 import type { ListItemProps, TypeIdNumber } from "types/todo";
-import { List } from "./components/List";
-import { AddForm } from "./components/AddForm";
-import { Filter } from "./components/Filter";
-import { Search } from "./components/Search";
+import { List } from "./List";
+import { AddForm } from "./AddForm";
+import { Filter } from "./Filter";
+import { Search } from "./Search";
 import styled from "@emotion/styled";
 import { reactLocalStorage } from "reactjs-localstorage";
 

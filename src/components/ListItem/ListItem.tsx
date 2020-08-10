@@ -1,7 +1,7 @@
 import React from "react";
 import { IconEdit, IconTrash2, IconButton } from "sancho";
 import styled from "@emotion/styled";
-import { ManageButton } from "@/components/ToDoList/components/List/components/Buttons";
+import { ManageButton } from "components/Buttons";
 import type { ListItemProps, TypeIdNumber } from "types/todo";
 
 interface Props {

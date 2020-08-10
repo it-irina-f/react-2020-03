@@ -1,6 +1,6 @@
-export * from "./ToDoList";
-export { Auth, authSlice } from "./Auth";
+export * from "../modules/ToDoList";
+export { Auth, authSlice } from "../modules/Auth";
 export * from "./Error404";
-export { AccessChecker } from "./AccessChecker";
-export { User } from "./User";
-export { ToDoScreen } from "./ToDoScreen";
+export { AccessChecker } from "../modules/AccessChecker";
+export { User } from "../modules/User";
+export { ToDoScreen } from "../screens";

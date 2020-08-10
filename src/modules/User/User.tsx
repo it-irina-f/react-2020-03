@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { isEmpty } from "ramda";
 import { ToDoState } from "@/AppStore";
-import { actions } from "@/components/Auth/reducer";
+import { actions } from "@/modules/Auth/reducer";
 import { Button, IconUser } from "sancho";
 import styled from "@emotion/styled";
 
