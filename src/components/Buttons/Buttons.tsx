@@ -1,6 +1,14 @@
 import React from "react";
-import type { ManageBtnProps } from "types/ui";
 import { IconButton } from "sancho";
+
+interface ManageBtnProps {
+  isSubmit?: boolean;
+  label: string;
+  name?: string;
+  id?: string;
+  icon: any;
+  onClick?: () => void;
+}
 
 export const ManageButton: React.FC<ManageBtnProps> = ({
   isSubmit = false,

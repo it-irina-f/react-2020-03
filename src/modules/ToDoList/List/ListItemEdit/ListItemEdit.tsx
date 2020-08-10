@@ -2,7 +2,16 @@ import React from "react";
 import { IconSave, IconX, Input } from "sancho";
 import { ManageButton } from "components/Buttons";
 import styled from "@emotion/styled";
-import type { ListItemProps, TypeIdNumber, TypeSaveListItem } from "types/todo";
+
+interface ListItemProps {
+  id: number;
+  text: string;
+  isComplete: boolean;
+}
+
+type TypeIdNumber = (id: number) => void;
+
+type TypeSaveListItem = (id: number, text: string) => void;
 
 interface ListItemEditProps {
   listItem: ListItemProps;

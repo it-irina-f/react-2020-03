@@ -26,6 +26,7 @@ describe("Component List", () => {
             handleEdit={click}
             saveListItem={click}
             editId={-1}
+            filter="all"
           />
         )
         .toJSON()
@@ -42,6 +43,7 @@ describe("Component List", () => {
             handleEdit={click}
             saveListItem={click}
             editId={0}
+            filter="all"
           />
         )
         .toJSON()
@@ -58,6 +60,7 @@ describe("Component List", () => {
             handleEdit={click}
             saveListItem={click}
             editId={-1}
+            filter="all"
           />
         )
         .toJSON()
@@ -73,6 +76,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     wrapper.find("input").at(3).simulate("change");
@@ -88,6 +92,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     wrapper
@@ -107,6 +112,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     const checkbox = wrapper.find("div").at(1).find("input");
@@ -122,6 +128,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     const checkbox = wrapper.find("input[name='checkbox_0']");
@@ -137,6 +144,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     expect(wrapper.find("div").at(1).find("label").text()).toEqual(
@@ -153,6 +161,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     expect(
@@ -169,6 +178,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     expect(wrapper.find("div[role='button']")).toHaveLength(10);
@@ -183,6 +193,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     wrapper
@@ -203,6 +214,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={1}
+        filter="all"
       />
     );
     expect(wrapper.find("form")).toHaveLength(1);
@@ -219,6 +231,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={1}
+        filter="all"
       />
     );
     wrapper.find("button[name='saveEditing']").simulate("submit");
@@ -234,6 +247,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={1}
+        filter="all"
       />
     );
     wrapper.find("div[id='cancelEditing_1']").simulate("click");
@@ -249,6 +263,7 @@ describe("Component List", () => {
         handleEdit={click}
         saveListItem={click}
         editId={-1}
+        filter="all"
       />
     );
     expect(wrapper.find("div")).toHaveLength(1);

@@ -1,5 +1,6 @@
 import React from "react";
-import { AccessChecker, ToDoList } from "@/components";
+import { ToDoList } from "@/modules";
+import { AccessChecker } from "@/modules";
 
 export const ToDoScreen = () => (
   <AccessChecker>

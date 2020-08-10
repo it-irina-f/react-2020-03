@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 import { ToDoState } from "@/AppStore";
-import { CheckState } from "components/../Auth/reducer";
+import { CheckState } from "@/modules/Auth/reducer";
 
 const mapStateToProps = ({ login }: ToDoState) => ({
   ...login,

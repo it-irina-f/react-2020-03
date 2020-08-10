@@ -26,6 +26,7 @@ export const componentList = () => [
     deleteListItem={action("Click for delete item")}
     handleEdit={action("Click for edit item")}
     saveListItem={action("Click for save editing")}
+    filter={"all"}
   />,
 ];
 
@@ -38,5 +39,6 @@ export const componentListEdit = () => [
     deleteListItem={action("Click for delete item")}
     handleEdit={action("Click for edit item")}
     saveListItem={action("Click for save editing")}
+    filter={"all"}
   />,
 ];

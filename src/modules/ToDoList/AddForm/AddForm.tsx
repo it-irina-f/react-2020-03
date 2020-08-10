@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Input } from "sancho";
-import type { TypeAddForm } from "types/todo";
 import styled from "@emotion/styled";
+
+type TypeAddForm = (text: string) => void;
 
 interface AddFormProps {
   addListItem: TypeAddForm;

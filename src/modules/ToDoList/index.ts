@@ -1,2 +1,4 @@
 export * from "./ToDoList";
-export * from "./components";
+export * from "./AddForm";
+export * from "./Filter";
+export * from "./List";
