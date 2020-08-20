@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 
 interface AddFormProps {
   addListItem: TypeAddForm;
+  activeLength: number;
 }
 
 interface AddFormState {
@@ -35,6 +36,9 @@ export class AddForm extends React.Component<AddFormProps, AddFormState> {
   };
 
   render() {
+    if (this.props.activeLength === 5) {
+      throw new Error("crashed");
+    }
     return (
       <FormWrapper onSubmit={this.submitHandler}>
         <Input
