@@ -1,11 +1,16 @@
 import React from "react";
-import type { ListItemProps, TypeIdNumber } from "types/todo";
-import { List } from "./List";
-import { AddForm } from "./AddForm";
-import { Filter } from "./Filter";
-import { Search } from "./Search";
+import { List } from "@/modules/ToDoList/List";
+import { AddForm } from "@/modules/ToDoList/AddForm";
+import { Filter } from "@/modules/ToDoList/Filter";
+import { Search } from "@/modules/ToDoList/Search";
 import styled from "@emotion/styled";
 import { reactLocalStorage } from "reactjs-localstorage";
+
+interface ListItemProps {
+  id: number;
+  text: string;
+  isComplete: boolean;
+}
 
 interface ToDoListProps {
   list?: ListItemProps[];

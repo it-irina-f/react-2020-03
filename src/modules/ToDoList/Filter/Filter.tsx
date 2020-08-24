@@ -1,6 +1,13 @@
 import React from "react";
-import { Button, Input } from "sancho";
-import type { TypeAddForm, TypeFilterMode } from "types/todo";
+import { Button } from "sancho";
+
+type TypeAddForm = (text: string) => void;
+
+interface TypeFilterMode {
+  id: string;
+  title: string;
+  isActive: boolean;
+}
 
 interface FilterProps {
   changeFilter: TypeAddForm;

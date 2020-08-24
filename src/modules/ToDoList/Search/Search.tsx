@@ -1,8 +1,8 @@
 import React from "react";
 import { IconButton, Input, IconSearch } from "sancho";
-
-import type { TypeAddForm } from "types/todo";
 import styled from "@emotion/styled";
+
+type TypeAddForm = (text: string) => void;
 
 interface SearchProps {
   searchItem: TypeAddForm;

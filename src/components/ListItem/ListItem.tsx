@@ -1,8 +1,15 @@
 import React from "react";
-import { IconEdit, IconTrash2, IconButton } from "sancho";
+import { IconEdit, IconTrash2 } from "sancho";
 import styled from "@emotion/styled";
-import { ManageButton } from "components/Buttons";
-import type { ListItemProps, TypeIdNumber } from "types/todo";
+import { ManageButton } from "@/components/Buttons";
+
+interface ListItemProps {
+  id: number;
+  text: string;
+  isComplete: boolean;
+}
+
+type TypeIdNumber = (id: number) => void;
 
 interface Props {
   listItem: ListItemProps;

@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import type { ListItemProps, TypeIdNumber, TypeSaveListItem } from "types/todo";
-
-import { ListItem, ListItemEdit } from "./components";
+import { ListItem } from "@/components/ListItem";
+import { ListItemEdit } from "./ListItemEdit";
 
 const ListWrapper = styled.div`
   padding: 20px;
@@ -12,6 +11,16 @@ const ListWrapper = styled.div`
     rgba(52, 58, 64, 0.1) 0px 6px 12px 0px,
     rgba(52, 58, 64, 0.12) 0px 6px 15px -2px;
 `;
+
+interface ListItemProps {
+  id: number;
+  text: string;
+  isComplete: boolean;
+}
+
+type TypeIdNumber = (id: number) => void;
+
+type TypeSaveListItem = (id: number, text: string) => void;
 
 interface Props {
   list: ListItemProps[];
