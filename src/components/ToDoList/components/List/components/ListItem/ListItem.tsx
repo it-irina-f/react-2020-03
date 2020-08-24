@@ -21,37 +21,38 @@ const LabelWrapper = styled.label`
   flex-grow: 1;
 `;
 
-export const ListItem: React.FC<Props> = ({
-  listItem,
-  toggleComplete,
-  deleteListItem,
-  editListItem,
-}) => {
-  return (
-    <ListItemWrapper>
-      <LabelWrapper>
-        <input
-          type="checkbox"
-          name={"checkbox_" + listItem.id}
-          checked={listItem.isComplete}
-          onChange={() => toggleComplete(listItem.id)}
+export class ListItem extends React.Component<Props, {}> {
+  shouldComponentUpdate(nextProps, nextState): boolean {
+    return this.props.listItem.isComplete !== nextProps.listItem.isComplete;
+  }
+
+  render() {
+    return (
+      <ListItemWrapper>
+        <LabelWrapper>
+          <input
+            type="checkbox"
+            name={"checkbox_" + this.props.listItem.id}
+            checked={this.props.listItem.isComplete}
+            onChange={() => this.props.toggleComplete(this.props.listItem.id)}
+          />
+          {this.props.listItem.text}
+        </LabelWrapper>
+        <IconButton
+          icon={<IconEdit />}
+          type="button"
+          onClick={() => this.props.editListItem(this.props.listItem.id)}
+          label="editListItem"
+          size="sm"
         />
-        {listItem.text}
-      </LabelWrapper>
-      <IconButton
-        icon={<IconEdit />}
-        type="button"
-        onClick={() => editListItem(listItem.id)}
-        label="editListItem"
-        size="sm"
-      />
-      <IconButton
-        icon={<IconTrash2 />}
-        type="button"
-        onClick={() => deleteListItem(listItem.id)}
-        label="deleteListItem"
-        size="sm"
-      />
-    </ListItemWrapper>
-  );
-};
+        <IconButton
+          icon={<IconTrash2 />}
+          type="button"
+          onClick={() => this.props.deleteListItem(this.props.listItem.id)}
+          label="deleteListItem"
+          size="sm"
+        />
+      </ListItemWrapper>
+    );
+  }
+}

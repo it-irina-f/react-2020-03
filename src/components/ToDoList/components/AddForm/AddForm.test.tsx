@@ -9,12 +9,12 @@ const click = jest.fn();
 describe("Test Component AddForm", () => {
   it("renders AddForm", () => {
     expect(
-      renderer.create(<AddForm addListItem={click} />).toJSON()
+      renderer.create(<AddForm addListItem={click} activeLength={2} />).toJSON()
     ).toMatchSnapshot();
   });
 
   it("should be able to click the button", () => {
-    const element = mount(<AddForm addListItem={click} />);
+    const element = mount(<AddForm addListItem={click} activeLength={2} />);
     element.find("button").simulate("submit");
     expect(click).toHaveBeenCalled();
   });

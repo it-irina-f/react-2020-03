@@ -1,7 +1,7 @@
 import React from "react";
 import type { ListItemProps } from "types/todo";
 import { List } from "./components/List";
-import { AddForm } from "./components/AddForm";
+import { AddForm, ErrorBoundary } from "./components/AddForm";
 import styled from "@emotion/styled";
 import { reactLocalStorage } from "reactjs-localstorage";
 
@@ -137,6 +137,10 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   }
 
   render() {
+    const activeLength = this.state.list.filter((item) => {
+      return item.isComplete === false;
+    }).length;
+
     return (
       <ToDoListWrapper>
         <TitleWrapper>Список дел</TitleWrapper>
@@ -153,7 +157,12 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
             saveListItem={this.saveItemHandler}
           />
         )}
-        <AddForm addListItem={this.addListItemHandler} />
+        <ErrorBoundary>
+          <AddForm
+            addListItem={this.addListItemHandler}
+            activeLength={activeLength}
+          />
+        </ErrorBoundary>
       </ToDoListWrapper>
     );
   }
