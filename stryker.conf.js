@@ -9,6 +9,5 @@ module.exports = {
   transpilers: [],
   coverageAnalysis: "off",
   tsconfigFile: "tsconfig.json",
-  files: ["src/**/*.ts"],
   mutate: ["src/**/*.ts"],
 };
