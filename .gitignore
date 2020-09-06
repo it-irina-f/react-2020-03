@@ -3,3 +3,6 @@ node_modules
 dist
 .history
 storybook-static
+
+# stryker temp files
+.stryker-tmp
