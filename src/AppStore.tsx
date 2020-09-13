@@ -4,6 +4,7 @@ import createSagaMiddleware from "redux-saga";
 import { fork } from "redux-saga/effects";
 
 import { authSlice, authSaga } from "@/modules/Auth";
+import { todoSlice } from "@/modules/ToDoList";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -13,6 +14,7 @@ function* rootSaga() {
 
 const reducer = combineReducers({
   login: authSlice.reducer,
+  todo: todoSlice.reducer,
 });
 
 export const store = configureStore({

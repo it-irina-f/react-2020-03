@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { List } from "@/modules/ToDoList/List";
 import { AddForm } from "@/modules/ToDoList/AddForm";
 import { Filter } from "@/modules/ToDoList/Filter";
 import { Search } from "@/modules/ToDoList/Search";
 import styled from "@emotion/styled";
 import { reactLocalStorage } from "reactjs-localstorage";
+
+import { ToDoState } from "@/AppStore";
+import { todoSlice } from "./reducer";
+import { connect } from "react-redux";
 
 interface ListItemProps {
   id: number;
@@ -45,7 +49,67 @@ const ManageWrapper = styled.div`
   margin: 20px 0;
 `;
 
-export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
+const mapStateToProps = ({ todo }: ToDoState) => ({
+  ...todo,
+});
+
+const mapDispatchToProps = {
+  addListItemHandler: todoSlice.actions.addListItem,
+  changeFilterHandler: todoSlice.actions.changeFilter,
+  searchItemHandler: todoSlice.actions.searchItem,
+  toggleCompleteHandler: todoSlice.actions.toggleComplete,
+  deleteItemHandler: todoSlice.actions.deleteItem,
+  editItemHandler: todoSlice.actions.editItem,
+  saveItemHandler: todoSlice.actions.editItem,
+};
+
+export type Props = ReturnType<typeof mapStateToProps> &
+  typeof mapDispatchToProps;
+
+export const ToDoListComponent: React.FC<Props> = ({
+  list,
+  isLoading,
+  editId,
+  filter,
+  queryResult,
+  addListItemHandler,
+  changeFilterHandler,
+  searchItemHandler,
+  toggleCompleteHandler,
+  deleteItemHandler,
+  editItemHandler,
+  saveItemHandler,
+}) => {
+  return (
+    <ToDoListWrapper>
+      <TitleWrapper>Список дел</TitleWrapper>
+      <ManageWrapper>
+        <Search searchItem={searchItemHandler} />
+        <Filter changeFilter={changeFilterHandler} />
+      </ManageWrapper>
+      {isLoading ? (
+        <h1>Загрузка данных...</h1>
+      ) : (
+        <List
+          list={queryResult.length === 0 ? list : queryResult}
+          editId={editId}
+          toggleComplete={toggleCompleteHandler}
+          deleteListItem={deleteItemHandler}
+          handleEdit={editItemHandler}
+          saveListItem={saveItemHandler}
+          filter={filter}
+        />
+      )}
+      <AddForm addListItem={addListItemHandler} />
+    </ToDoListWrapper>
+  );
+};
+export const ToDoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ToDoListComponent);
+
+/*export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
   constructor(props: ToDoListProps) {
     super(props);
     this.state = {
@@ -184,4 +248,4 @@ export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
       </ToDoListWrapper>
     );
   }
-}
+}*/
