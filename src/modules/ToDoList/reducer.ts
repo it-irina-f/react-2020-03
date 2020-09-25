@@ -21,6 +21,11 @@ export const initialState: {
   queryResult: [],
 };
 
+export type PayloadSaveItem = PayloadAction<{
+  id: number;
+  text: string;
+}>;
+
 export const todoSlice = createSlice({
   name: "todo",
   initialState,
@@ -80,6 +85,18 @@ export const todoSlice = createSlice({
       return {
         ...state,
         editId: payload,
+      };
+    },
+    saveItem: (state, { payload }: PayloadSaveItem) => {
+      const updList = state.list.map((row) => {
+        if (row.id === payload.id) {
+          return { ...row, text: payload.text };
+        }
+        return row;
+      });
+      return {
+        ...state,
+        list: updList,
       };
     },
   },

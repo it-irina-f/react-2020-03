@@ -60,7 +60,7 @@ const mapDispatchToProps = {
   toggleCompleteHandler: todoSlice.actions.toggleComplete,
   deleteItemHandler: todoSlice.actions.deleteItem,
   editItemHandler: todoSlice.actions.editItem,
-  saveItemHandler: todoSlice.actions.editItem,
+  saveItemHandler: todoSlice.actions.saveItem,
 };
 
 export type Props = ReturnType<typeof mapStateToProps> &
