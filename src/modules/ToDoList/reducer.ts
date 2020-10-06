@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CheckState } from "@/modules/Auth/reducer";
+import { ToDoState } from "@/AppStore";
 
 interface ListItemProps {
   id: number;
@@ -7,29 +7,36 @@ interface ListItemProps {
   isComplete: boolean;
 }
 
+export const selectors = {
+  todo: ({ todo }: ToDoState) => todo,
+};
+
 export const initialState: {
   isLoading: boolean;
   editId: number;
   filter: string;
   list: ListItemProps[];
   queryResult: ListItemProps[];
+  textInput: string;
 } = {
   list: [],
   isLoading: false,
   editId: -1,
   filter: "all",
   queryResult: [],
+  textInput: "",
 };
-
-export type PayloadSaveItem = PayloadAction<{
-  id: number;
-  text: string;
-}>;
 
 export const todoSlice = createSlice({
   name: "todo",
   initialState,
   reducers: {
+    setList: (state, { payload }: PayloadAction<any>) => {
+      return {
+        ...state,
+        list: payload,
+      };
+    },
     addListItem: (state, { payload }: PayloadAction<string>) => {
       const newList = [
         ...state.list,
@@ -82,21 +89,30 @@ export const todoSlice = createSlice({
       };
     },
     editItem: (state, { payload }: PayloadAction<number>) => {
+      const textInput =
+        payload != -1
+          ? state.list.filter((row) => {
+              return row.id === payload;
+            })[0].text
+          : "";
       return {
         ...state,
         editId: payload,
+        textInput: textInput,
       };
     },
-    saveItem: (state, { payload }: PayloadSaveItem) => {
+    saveItem: (state, { payload }: PayloadAction<string>) => {
       const updList = state.list.map((row) => {
-        if (row.id === payload.id) {
-          return { ...row, text: payload.text };
+        if (row.id === state.editId) {
+          return { ...row, text: payload };
         }
         return row;
       });
+
       return {
         ...state,
         list: updList,
+        editId: -1,
       };
     },
   },

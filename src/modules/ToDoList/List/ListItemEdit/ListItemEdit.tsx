@@ -1,27 +1,12 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import { IconSave, IconX, Input } from "sancho";
 import { ManageButton } from "components/Buttons";
 import styled from "@emotion/styled";
+import { isEmpty } from "ramda";
 
-interface ListItemProps {
-  id: number;
-  text: string;
-  isComplete: boolean;
-}
-
-type TypeIdNumber = (id: number) => void;
-
-type TypeSaveListItem = (id: number, text: string) => void;
-
-interface ListItemEditProps {
-  listItem: ListItemProps;
-  saveListItem: TypeSaveListItem;
-  handleEdit: TypeIdNumber;
-}
-
-interface ListItemEditState {
-  textInput: string;
-}
+import { ToDoState } from "@/AppStore";
+import { todoSlice } from "@/modules/ToDoList/reducer";
+import { connect } from "react-redux";
 
 const FormWrapper = styled.form`
   display: flex;
@@ -30,50 +15,61 @@ const FormWrapper = styled.form`
   padding: 0 0 10px;
 `;
 
-export class ListItemEdit extends React.Component<
-  ListItemEditProps,
-  ListItemEditState
-> {
-  state = {
-    textInput: this.props.listItem.text,
-  };
+const mapStateToProps = ({ todo }: ToDoState) => ({
+  ...todo,
+});
 
-  inputChangeHandle = (ev: React.ChangeEvent) => {
-    this.setState({
-      textInput: (ev.target as HTMLInputElement).value,
-    });
-  };
+const mapDispatchToProps = {
+  saveItemHandler: todoSlice.actions.saveItem,
+  editItemHandler: todoSlice.actions.editItem,
+};
 
-  submitHandler = (ev: React.FormEvent) => {
-    ev.preventDefault();
-    this.props.saveListItem(this.props.listItem.id, this.state.textInput);
-  };
+export type Props = ReturnType<typeof mapStateToProps> &
+  typeof mapDispatchToProps;
 
-  render() {
-    const isSubmit = true;
-    return (
-      <FormWrapper onSubmit={this.submitHandler}>
-        <Input
-          inputSize="sm"
-          placeholder="Переименовать задачу"
-          type="text"
-          name={"text_" + this.props.listItem.id}
-          value={this.state.textInput}
-          onChange={this.inputChangeHandle}
-        />
-        <ManageButton
-          icon={<IconSave />}
-          name="saveEditing"
-          label="saveEditing"
-          isSubmit={isSubmit}
-        />
-        <ManageButton
-          icon={<IconX />}
-          onClick={() => this.props.handleEdit(-1)}
-          label="cancelEditing"
-          id={"cancelEditing_" + this.props.listItem.id}
-        />
-      </FormWrapper>
-    );
-  }
-}
+export const ListItemEditComponent: React.FC<Props> = ({
+  editId,
+  textInput,
+  saveItemHandler,
+  editItemHandler,
+}) => {
+  const [text, setName] = useState(textInput);
+
+  const onSubmit = useCallback(
+    async (ev) => {
+      ev.preventDefault();
+      if (!isEmpty(text)) {
+        saveItemHandler(text);
+      }
+    },
+    [text, saveItemHandler]
+  );
+  return (
+    <FormWrapper onSubmit={onSubmit}>
+      <Input
+        inputSize="sm"
+        placeholder="Переименовать задачу"
+        type="text"
+        name={"text_" + editId}
+        value={text}
+        onChange={(ev) => setName((ev.target as HTMLInputElement).value)}
+      />
+      <ManageButton
+        icon={<IconSave />}
+        name="saveEditing"
+        label="saveEditing"
+        isSubmit={true}
+      />
+      <ManageButton
+        icon={<IconX />}
+        onClick={() => editItemHandler(-1)}
+        label="cancelEditing"
+        id={"cancelEditing_" + editId}
+      />
+    </FormWrapper>
+  );
+};
+export const ListItemEdit = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ListItemEditComponent);
