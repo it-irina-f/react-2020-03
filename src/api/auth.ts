@@ -26,12 +26,10 @@ export const isLoggedIn = async () => {
 export const getToDosSession = async () => {
   await sleep(2000);
   const todos = await localStorage.getItem("todos");
-  console.log("todos from", todos);
-  return JSON.parse(todos);
+  return todos;
 };
 
 export const setToDosSession = async (todos) => {
-  console.log('todos to ', todos);
   await sleep(1000);
   await localStorage.setItem("todos", JSON.stringify(todos));
 };

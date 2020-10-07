@@ -113,6 +113,7 @@ export const todoSlice = createSlice({
         ...state,
         list: updList,
         editId: -1,
+        textInput: "",
       };
     },
   },
