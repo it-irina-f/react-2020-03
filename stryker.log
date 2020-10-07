@@ -1,0 +1,344 @@
+23:09:11 (24356) INFO ConfigReader Using stryker.conf.js
+23:09:11 (24356) DEBUG BroadcastReporter Broadcasting to reporters ["html","clear-text","progress"]
+23:09:11 (24356) DEBUG ConfigReader Loading config C:\Users\Ирина\www\del\react-2020-03\stryker.conf.js
+23:09:11 (24356) DEBUG ConfigReader Loaded config: {
+  "mutator": "typescript",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off",
+  "tsconfigFile": "tsconfig.json",
+  "files": [
+    "src/**/*.ts"
+  ],
+  "mutate": [
+    "src/**/*.ts"
+  ],
+  "allowConsoleColors": true,
+  "commandRunner": {
+    "command": "npm test"
+  },
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "warnings": true,
+  "configFile": "C:\\Users\\Ирина\\www\\del\\react-2020-03\\stryker.conf.js"
+}
+23:09:11 (24356) DEBUG PluginLoader Loading @stryker-mutator/* from C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator
+23:09:11 (24356) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner" (matched with expression @stryker-mutator/*)
+23:09:11 (24356) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript" (matched with expression @stryker-mutator/*)
+23:09:11 (24356) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner
+23:09:11 (24356) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript
+23:09:11 (24356) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\reporters\index.js
+23:09:11 (24356) DEBUG buildSchemaWithPluginContributions Contributing 2 schemas from plugins to options validation.
+23:09:11 (24356) INFO TypescriptOptionsEditor Loading tsconfig file C:\Users\Ирина\www\del\react-2020-03\tsconfig.json
+23:09:11 (24356) INFO InputFileResolver Found 19 of 19 file(s) to be mutated.
+23:09:11 (24356) DEBUG InputFileResolver All input files: [
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\api\\auth.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\Buttons\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\ListItem\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\AccessChecker\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\AddForm\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Filter\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\ListItemEdit\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Search\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\User\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\screens\\index.ts"
+]
+23:09:11 (24356) DEBUG InputFileResolver Files to mutate: [
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\api\\auth.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\Buttons\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\ListItem\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\AccessChecker\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\AddForm\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Filter\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\ListItemEdit\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Search\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\User\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\screens\\index.ts"
+]
+23:09:11 (24356) DEBUG TemporaryDirectory Using temp directory "C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp"
+23:09:11 (24356) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+23:09:11 (24356) INFO InitialTestExecutor Starting initial test run. This may take a while.
+23:09:11 (24356) DEBUG Sandbox Creating a sandbox for files in C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox6007115
+23:09:11 (24356) DEBUG Sandbox Creating test runner 0
+23:09:11 (24356) DEBUG ChildProcessProxy Starting C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\test-runner\ChildProcessTestRunnerWorker.js in child process 12920
+23:09:12 (12920) DEBUG ChildProcessProxyWorker Changing current working directory for this process to C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox6007115
+23:09:12 (12920) DEBUG PluginLoader Loading @stryker-mutator/* from C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator
+23:09:12 (12920) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner" (matched with expression @stryker-mutator/*)
+23:09:12 (12920) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript" (matched with expression @stryker-mutator/*)
+23:09:12 (12920) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner
+23:09:12 (12920) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript
+23:09:12 (12920) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\reporters\index.js
+23:09:12 (12920) TRACE JestTestRunner Merging file-based config {} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+23:09:12 (12920) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+23:09:12 (12920) DEBUG JestTestRunner Project root is C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox6007115
+23:09:12 (24356) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+23:09:12 (12920) TRACE JestGreaterThan25Adapter Invoking Jest with config {"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"C:\\Users\\Ирина\\www\\del\\react-2020-03\\.stryker-tmp\\sandbox6007115","reporters":[]}
+23:09:14 (24356) DEBUG ChildProcessProxy Disposing of worker process 12920
+23:09:14 (24356) DEBUG ChildProcessProxy Kill 12920
+23:09:14 (24356) ERROR InitialTestExecutor One or more tests resulted in an error:
+	  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (../../node_modules/@jest/core/build/TestScheduler.js:173:18)
+
+	  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (../../node_modules/@jest/core/build/TestScheduler.js:173:18)
+
+23:09:14 (24356) ERROR StrykerCli an error occurred Error: Something went wrong in the initial test run
+    at InitialTestExecutor.validateResult (C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\process\InitialTestExecutor.js:86:15)
+    at InitialTestExecutor.run (C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\process\InitialTestExecutor.js:41:14)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Stryker.runMutationTest (C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\Stryker.js:53:38)
+13:23:38 (18944) INFO ConfigReader Using stryker.conf.js
+13:23:38 (18944) DEBUG BroadcastReporter Broadcasting to reporters ["html","clear-text","progress"]
+13:23:38 (18944) DEBUG ConfigReader Loading config C:\Users\Ирина\www\del\react-2020-03\stryker.conf.js
+13:23:38 (18944) DEBUG ConfigReader Loaded config: {
+  "mutator": "typescript",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off",
+  "tsconfigFile": "tsconfig.json",
+  "files": [
+    "src/**/*.ts"
+  ],
+  "mutate": [
+    "src/**/*.ts"
+  ],
+  "allowConsoleColors": true,
+  "commandRunner": {
+    "command": "npm test"
+  },
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "warnings": true,
+  "configFile": "C:\\Users\\Ирина\\www\\del\\react-2020-03\\stryker.conf.js"
+}
+13:23:38 (18944) DEBUG PluginLoader Loading @stryker-mutator/* from C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator
+13:23:38 (18944) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner" (matched with expression @stryker-mutator/*)
+13:23:38 (18944) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript" (matched with expression @stryker-mutator/*)
+13:23:38 (18944) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner
+13:23:38 (18944) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript
+13:23:38 (18944) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\reporters\index.js
+13:23:38 (18944) DEBUG buildSchemaWithPluginContributions Contributing 2 schemas from plugins to options validation.
+13:23:38 (18944) INFO TypescriptOptionsEditor Loading tsconfig file C:\Users\Ирина\www\del\react-2020-03\tsconfig.json
+13:23:38 (18944) INFO InputFileResolver Found 20 of 20 file(s) to be mutated.
+13:23:38 (18944) DEBUG InputFileResolver All input files: [
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\api\\auth.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\Buttons\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\ListItem\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\e2e\\app.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\AccessChecker\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\AddForm\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Filter\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\ListItemEdit\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Search\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\User\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\screens\\index.ts"
+]
+13:23:38 (18944) DEBUG InputFileResolver Files to mutate: [
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\api\\auth.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\Buttons\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\components\\ListItem\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\e2e\\app.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\AccessChecker\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\reducer.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.test.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\Auth\\saga.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\AddForm\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Filter\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\List\\ListItemEdit\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\ToDoList\\Search\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\modules\\User\\index.ts",
+  "C:\\Users\\Ирина\\www\\del\\react-2020-03\\src\\screens\\index.ts"
+]
+13:23:38 (18944) DEBUG TemporaryDirectory Using temp directory "C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp"
+13:23:38 (18944) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+13:23:38 (18944) INFO InitialTestExecutor Starting initial test run. This may take a while.
+13:23:38 (18944) DEBUG Sandbox Creating a sandbox for files in C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox8888341
+13:23:38 (18944) DEBUG Sandbox Creating test runner 0
+13:23:38 (18944) DEBUG ChildProcessProxy Starting C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\test-runner\ChildProcessTestRunnerWorker.js in child process 27756
+13:23:38 (27756) DEBUG ChildProcessProxyWorker Changing current working directory for this process to C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox8888341
+13:23:38 (27756) DEBUG PluginLoader Loading @stryker-mutator/* from C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator
+13:23:38 (27756) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner" (matched with expression @stryker-mutator/*)
+13:23:38 (27756) DEBUG PluginLoader Loading plugin "C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript" (matched with expression @stryker-mutator/*)
+13:23:38 (27756) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\jest-runner
+13:23:38 (27756) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\typescript
+13:23:38 (27756) DEBUG PluginLoader Loading plugins C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\reporters\index.js
+13:23:38 (27756) TRACE JestTestRunner Merging file-based config {} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+13:23:38 (27756) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+13:23:38 (27756) DEBUG JestTestRunner Project root is C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox8888341
+13:23:38 (18944) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+13:23:38 (27756) TRACE JestGreaterThan25Adapter Invoking Jest with config {"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"C:\\Users\\Ирина\\www\\del\\react-2020-03\\.stryker-tmp\\sandbox8888341","reporters":[]}
+13:23:40 (18944) DEBUG ChildProcessProxy Disposing of worker process 27756
+13:23:41 (18944) DEBUG ChildProcessProxy Kill 27756
+13:23:41 (18944) ERROR InitialTestExecutor One or more tests resulted in an error:
+	  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    This usually means that you are trying to import a file which Jest cannot parse, e.g. it's not plain JavaScript.
+
+    By default, if Jest sees a Babel config, it will use that to transform your files, ignoring "node_modules".
+
+    Here's what you can do:
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/en/configuration.html
+
+    Details:
+
+    C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox8888341\src\modules\Auth\saga.test.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){import { expectSaga } from "redux-saga-test-plan";
+                                                                                                    ^
+
+    SyntaxError: Unexpected token {
+
+      at Runtime.createScriptFromCode (../../node_modules/jest-runtime/build/index.js:1258:14)
+
+	  ● Test suite failed to run
+
+    C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox8888341\src\e2e\app.test.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){import "expect-puppeteer";
+                                                                                                    ^^^^^^^^^^^^^^^^^^
+
+    SyntaxError: Unexpected string
+
+      at Runtime.createScriptFromCode (../../node_modules/jest-runtime/build/index.js:1258:14)
+
+	  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    This usually means that you are trying to import a file which Jest cannot parse, e.g. it's not plain JavaScript.
+
+    By default, if Jest sees a Babel config, it will use that to transform your files, ignoring "node_modules".
+
+    Here's what you can do:
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/en/configuration.html
+
+    Details:
+
+    C:\Users\Ирина\www\del\react-2020-03\.stryker-tmp\sandbox8888341\src\modules\Auth\reducer.test.ts:1
+    ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){import { actions, reducer, CheckState, initialState } from "./reducer";
+                                                                                                    ^
+
+    SyntaxError: Unexpected token {
+
+      at Runtime.createScriptFromCode (../../node_modules/jest-runtime/build/index.js:1258:14)
+
+13:23:41 (18944) ERROR StrykerCli an error occurred Error: Something went wrong in the initial test run
+    at InitialTestExecutor.validateResult (C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\process\InitialTestExecutor.js:86:15)
+    at InitialTestExecutor.run (C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\process\InitialTestExecutor.js:41:14)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Stryker.runMutationTest (C:\Users\Ирина\www\del\react-2020-03\node_modules\@stryker-mutator\core\src\Stryker.js:53:38)
