@@ -7,8 +7,11 @@ import { actions, selectors } from "./reducer";
 
 export function* getToDosFromSession() {
   let todos = yield call(getToDosSession);
-  if (isEmpty(todos)) {
+
+  if (isEmpty(todos) || todos === null) {
     todos = [];
+  } else {
+    todos = JSON.parse(todos);
   }
 
   yield put(actions.setList(todos));
