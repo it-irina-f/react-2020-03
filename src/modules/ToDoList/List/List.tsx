@@ -20,7 +20,7 @@ interface ListItemProps {
 
 type TypeIdNumber = (id: number) => void;
 
-type TypeSaveListItem = (id: number, text: string) => void;
+type TypeSaveListItem = (text: string) => void;
 
 interface Props {
   list: ListItemProps[];
@@ -32,18 +32,9 @@ interface Props {
   filter: string;
 }
 
-interface State {
-  list: ListItemProps[];
-  filter: string;
-}
-
-export class List extends React.Component<Props, State> {
+export class List extends React.Component<Props, {}> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      list: this.props.list,
-      filter: this.props.filter,
-    };
   }
 
   sortList(initList: ListItemProps[], filter: string) {
@@ -72,12 +63,7 @@ export class List extends React.Component<Props, State> {
     const editId = this.props.editId;
     const itemList = sortList.map((row) =>
       row.id === editId ? (
-        <ListItemEdit
-          key={row.id}
-          listItem={row}
-          saveListItem={this.props.saveListItem}
-          handleEdit={this.props.handleEdit}
-        />
+        <ListItemEdit key={row.id} />
       ) : (
         <ListItem
           key={row.id}

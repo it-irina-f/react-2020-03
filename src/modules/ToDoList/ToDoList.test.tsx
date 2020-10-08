@@ -14,9 +14,7 @@ const list = [
 
 describe("Component ToDoList", () => {
   it("renders list", () => {
-    expect(
-      renderer.create(<ToDoList list={list} />).toJSON()
-    ).toMatchSnapshot();
+    expect(renderer.create(<ToDoList />).toJSON()).toMatchSnapshot();
   });
 });
 

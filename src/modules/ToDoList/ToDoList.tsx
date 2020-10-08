@@ -1,28 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { List } from "@/modules/ToDoList/List";
 import { AddForm } from "@/modules/ToDoList/AddForm";
 import { Filter } from "@/modules/ToDoList/Filter";
 import { Search } from "@/modules/ToDoList/Search";
 import styled from "@emotion/styled";
-import { reactLocalStorage } from "reactjs-localstorage";
 
-interface ListItemProps {
-  id: number;
-  text: string;
-  isComplete: boolean;
-}
-
-interface ToDoListProps {
-  list?: ListItemProps[];
-}
-
-interface ToDoListState {
-  list: ListItemProps[];
-  isLoading: boolean;
-  editId: number;
-  filter: string;
-  queryResult: ListItemProps[];
-}
+import { ToDoState } from "@/AppStore";
+import { todoSlice } from "./reducer";
+import { connect } from "react-redux";
 
 const ToDoListWrapper = styled.div`
   display: block;
@@ -45,143 +30,62 @@ const ManageWrapper = styled.div`
   margin: 20px 0;
 `;
 
-export class ToDoList extends React.Component<ToDoListProps, ToDoListState> {
-  constructor(props: ToDoListProps) {
-    super(props);
-    this.state = {
-      list: [],
-      isLoading: true,
-      editId: -1,
-      filter: "all",
-      queryResult: [],
-    };
-  }
+const mapStateToProps = ({ todo }: ToDoState) => ({
+  ...todo,
+});
 
-  componentDidMount(): void {
-    this.timerHandle();
-  }
+const mapDispatchToProps = {
+  addListItemHandler: todoSlice.actions.addListItem,
+  changeFilterHandler: todoSlice.actions.changeFilter,
+  searchItemHandler: todoSlice.actions.searchItem,
+  toggleCompleteHandler: todoSlice.actions.toggleComplete,
+  deleteItemHandler: todoSlice.actions.deleteItem,
+  editItemHandler: todoSlice.actions.editItem,
+  saveItemHandler: todoSlice.actions.saveItem,
+};
 
-  componentWillUnmount(): void {
-    clearTimeout(this.timerHandle());
-  }
+export type Props = ReturnType<typeof mapStateToProps> &
+  typeof mapDispatchToProps;
 
-  timerHandle = () => setTimeout(() => this.getList(), 3000);
-
-  getList(): void {
-    const todosFromLocalStorage = reactLocalStorage.getObject(
-      "localStorageTodos"
-    );
-    this.setState({
-      isLoading: false,
-      list: Array.isArray(todosFromLocalStorage) ? todosFromLocalStorage : [],
-    });
-  }
-
-  updateList(updateList): void {
-    this.setState(
-      {
-        list: updateList,
-      },
-      () => {
-        reactLocalStorage.setObject("localStorageTodos", this.state.list);
-      }
-    );
-  }
-
-  toggleCompleteHandler = (id: number) => {
-    const updList = this.state.list.map((row) => {
-      if (row.id === id) {
-        return { ...row, isComplete: !row.isComplete };
-      }
-      return row;
-    });
-
-    this.updateList(updList);
-  };
-
-  addListItemHandler = (text: string) => {
-    const newList = [
-      ...this.state.list,
-      {
-        id: Date.now(),
-        text: text,
-        isComplete: false,
-      },
-    ];
-
-    this.updateList(newList);
-  };
-
-  deleteItemHandler = (id: number) => {
-    const updList = this.state.list.filter((row) => {
-      return row.id !== id;
-    });
-
-    this.updateList(updList);
-  };
-
-  editHandler = (id: number) => {
-    this.setState({
-      editId: id,
-    });
-  };
-
-  saveItemHandler = (id: number, text: string) => {
-    const updList = this.state.list.map((row) => {
-      if (row.id === id) {
-        return { ...row, text };
-      }
-      return row;
-    });
-
-    this.updateList(updList);
-
-    this.editHandler(-1);
-  };
-
-  changeFilterHandler = (mode: string) => {
-    this.setState({
-      filter: mode,
-    });
-  };
-
-  searchItemHandler = (text: string) => {
-    const queryResult = this.state.list.filter((row) => {
-      return row.text.toLowerCase().indexOf(text.toLowerCase()) != -1;
-    });
-
-    this.setState({
-      queryResult: queryResult,
-    });
-  };
-
-  render() {
-    return (
-      <ToDoListWrapper>
-        <TitleWrapper>Список дел</TitleWrapper>
-        <ManageWrapper>
-          <Search searchItem={this.searchItemHandler} />
-          <Filter changeFilter={this.changeFilterHandler} />
-        </ManageWrapper>
-        {this.state.isLoading ? (
-          <h1>Загрузка данных...</h1>
-        ) : (
-          <List
-            list={
-              this.state.queryResult.length === 0
-                ? this.state.list
-                : this.state.queryResult
-            }
-            editId={this.state.editId}
-            toggleComplete={this.toggleCompleteHandler}
-            deleteListItem={this.deleteItemHandler}
-            handleEdit={this.editHandler}
-            saveListItem={this.saveItemHandler}
-            filter={this.state.filter}
-          />
-        )}
-        <AddForm addListItem={this.addListItemHandler} />
-      </ToDoListWrapper>
-    );
-  }
-}
+export const ToDoListComponent: React.FC<Props> = ({
+  list,
+  isLoading,
+  editId,
+  filter,
+  queryResult,
+  addListItemHandler,
+  changeFilterHandler,
+  searchItemHandler,
+  toggleCompleteHandler,
+  deleteItemHandler,
+  editItemHandler,
+  saveItemHandler,
+}) => {
+  return (
+    <ToDoListWrapper>
+      <TitleWrapper>Список дел</TitleWrapper>
+      <ManageWrapper>
+        <Search searchItem={searchItemHandler} />
+        <Filter changeFilter={changeFilterHandler} />
+      </ManageWrapper>
+      {isLoading ? (
+        <h1>Загрузка данных...</h1>
+      ) : (
+        <List
+          list={queryResult.length === 0 ? list : queryResult}
+          editId={editId}
+          toggleComplete={toggleCompleteHandler}
+          deleteListItem={deleteItemHandler}
+          handleEdit={editItemHandler}
+          saveListItem={saveItemHandler}
+          filter={filter}
+        />
+      )}
+      <AddForm addListItem={addListItemHandler} />
+    </ToDoListWrapper>
+  );
+};
+export const ToDoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ToDoListComponent);

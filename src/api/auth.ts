@@ -22,3 +22,14 @@ export const isLoggedIn = async () => {
   const login = await getUserSession();
   return Boolean(login);
 };
+
+export const getToDosSession = async () => {
+  await sleep(2000);
+  const todos = await localStorage.getItem("todos");
+  return todos;
+};
+
+export const setToDosSession = async (todos) => {
+  await sleep(1000);
+  await localStorage.setItem("todos", JSON.stringify(todos));
+};

@@ -22,7 +22,6 @@ export const AccessCheckerComponent: FC<Props> = ({
   if (status === CheckState.initiated) {
     return <div>Загрузка данных...</div>;
   }
-
   if (status === CheckState.failed) {
     return <Redirect to={redirectPath} />;
   }

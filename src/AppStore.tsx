@@ -1,24 +1,19 @@
 import { combineReducers } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
-import createSagaMiddleware from "redux-saga";
-import { fork } from "redux-saga/effects";
+import { createStore } from "redux-dynamic-modules";
+import { getSagaExtension } from "redux-dynamic-modules-saga";
 
-import { authSlice, authSaga } from "@/modules/Auth";
-
-const sagaMiddleware = createSagaMiddleware();
-
-function* rootSaga() {
-  yield fork(authSaga);
-}
+import { authSlice, getAuthModule } from "@/modules/Auth";
+import { todoSlice, getToDoModule } from "@/modules/ToDoList";
 
 const reducer = combineReducers({
   login: authSlice.reducer,
+  todo: todoSlice.reducer,
 });
-
-export const store = configureStore({
-  reducer,
-  middleware: [sagaMiddleware],
-});
-sagaMiddleware.run(rootSaga);
 
 export type ToDoState = ReturnType<typeof reducer>;
+
+export const store = createStore<ToDoState>(
+  { extensions: [getSagaExtension({})] },
+  getAuthModule(),
+  getToDoModule()
+);
