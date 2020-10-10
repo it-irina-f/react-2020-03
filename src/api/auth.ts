@@ -24,7 +24,7 @@ export const isLoggedIn = async () => {
 };
 
 export const getToDosSession = async () => {
-  await sleep(2000);
+  await sleep(1000);
   const todos = await localStorage.getItem("todos");
   return todos;
 };
