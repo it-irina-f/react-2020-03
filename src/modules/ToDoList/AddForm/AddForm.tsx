@@ -39,6 +39,7 @@ export class AddForm extends React.Component<AddFormProps, AddFormState> {
     return (
       <FormWrapper onSubmit={this.submitHandler}>
         <Input
+          required
           inputSize="md"
           placeholder="Добавить новую задачу"
           type="text"
