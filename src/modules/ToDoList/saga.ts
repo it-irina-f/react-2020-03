@@ -6,7 +6,8 @@ import { getToDosSession, setToDosSession } from "@/api/auth";
 import { actions, selectors } from "./reducer";
 
 export function* getToDosFromSession() {
-  let todos = yield call(getToDosSession);
+  const name = yield select(selectors.login);
+  let todos = yield call(getToDosSession, name.username);
 
   if (isEmpty(todos) || todos === null) {
     todos = [];
@@ -19,7 +20,8 @@ export function* getToDosFromSession() {
 
 export function* saveToDosToSession() {
   const data = yield select(selectors.todo);
-  yield call(setToDosSession, data.list);
+  const name = yield select(selectors.login);
+  yield call(setToDosSession, data.list, name.username);
 }
 
 export function* todoSaga() {

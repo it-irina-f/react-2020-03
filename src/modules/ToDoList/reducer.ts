@@ -9,6 +9,7 @@ interface ListItemProps {
 
 export const selectors = {
   todo: ({ todo }: ToDoState) => todo,
+  login: ({ login }: ToDoState) => login,
 };
 
 export const initialState: {
