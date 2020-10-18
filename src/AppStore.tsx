@@ -14,6 +14,5 @@ export type ToDoState = ReturnType<typeof reducer>;
 
 export const store = createStore<ToDoState>(
   { extensions: [getSagaExtension({})] },
-  getAuthModule(),
-  getToDoModule()
+  getAuthModule()
 );

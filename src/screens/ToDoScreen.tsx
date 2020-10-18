@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-import { ToDoList, AccessChecker } from "@/modules";
+import { ToDoList, AccessChecker, getToDoModule } from "@/modules";
 import { DynamicModuleLoader } from "redux-dynamic-modules";
 
 export const ToDoScreen = () => (
-  <DynamicModuleLoader modules={[]}>
+  <DynamicModuleLoader modules={[getToDoModule()]}>
     <AccessChecker>
       <ToDoList />
     </AccessChecker>

@@ -29,10 +29,18 @@ describe("ToDoList saga test", () => {
     textInput: "",
   };
 
+  const loginState = {
+    username: "irina",
+    status: 1,
+  };
+
   it("getToDosFromSession success if not-empty todos", () => {
     return expectSaga(getToDosFromSession)
       .withReducer(reducer)
-      .provide([[matchers.call.fn(getToDosSession), JSON.stringify(list)]])
+      .provide([
+        [select(selectors.login), loginState],
+        [matchers.call.fn(getToDosSession), JSON.stringify(list)],
+      ])
       .put(actions.setList(list))
       .hasFinalState(appState)
       .run();
@@ -41,7 +49,10 @@ describe("ToDoList saga test", () => {
   it("getToDosFromSession success if empty todos", () => {
     return expectSaga(getToDosFromSession)
       .withReducer(reducer)
-      .provide([[matchers.call.fn(getToDosSession), ""]])
+      .provide([
+        [select(selectors.login), loginState],
+        [matchers.call.fn(getToDosSession), ""],
+      ])
       .put(actions.setList([]))
       .hasFinalState({ ...appState, list: [] })
       .run();
@@ -49,8 +60,11 @@ describe("ToDoList saga test", () => {
 
   it("save list in session", () => {
     return expectSaga(saveToDosToSession)
-      .provide([[select(selectors.todo), appState]])
-      .call(setToDosSession, list)
+      .provide([
+        [select(selectors.todo), appState],
+        [select(selectors.login), loginState],
+      ])
+      .call(setToDosSession, list, loginState.username)
       .run();
   });
 });

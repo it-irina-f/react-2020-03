@@ -23,13 +23,13 @@ export const isLoggedIn = async () => {
   return Boolean(login);
 };
 
-export const getToDosSession = async () => {
-  await sleep(2000);
-  const todos = await localStorage.getItem("todos");
+export const getToDosSession = async (name: string) => {
+  await sleep(1000);
+  const todos = await localStorage.getItem(name);
   return todos;
 };
 
-export const setToDosSession = async (todos) => {
+export const setToDosSession = async (todos: object, name: string) => {
   await sleep(1000);
-  await localStorage.setItem("todos", JSON.stringify(todos));
+  await localStorage.setItem(name, JSON.stringify(todos));
 };
